@@ -1,0 +1,1057 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-errno.o)
+                              lib_build/syscalls.o (__errno)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-impure.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-errno.o) (_impure_ptr)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-init.o)
+                              lib_build/startup_XMC4500.o (__libc_init_array)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-itoa.o)
+                              build/PartB.o (itoa)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-strlen.o)
+                              build/PartB.o (strlen)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-utoa.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-itoa.o) (__utoa)
+
+Allocating common symbols
+Common symbol       size              file
+
+button1time_str     0x1               build/PartB.o
+button1check        0x4               build/PartB.o
+button2check        0x4               build/PartB.o
+
+Discarded input sections
+
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .group         0x0000000000000000        0xc build/PartB.o
+ .comment       0x0000000000000000       0x80 build/PartB.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000      0xa4e lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000      0x16d lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x22 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x8e lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x51 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0xef lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x6a lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000      0x1df lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x22 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x5e lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x18 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x35 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x34 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x58 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x1f lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x43 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x20 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000      0x18e lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000      0x353 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x10 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x35 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000      0x167 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x2d lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x28 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0xaf lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000      0xfe7 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x16 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000    0x1474b lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x12 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x4c lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0x22 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000      0x861 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000000000       0xa5 lib_build/xmc_gpio.o
+ .comment       0x0000000000000000       0x80 lib_build/xmc_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000      0xa4e lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000      0x16d lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x22 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x8e lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x51 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0xef lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x6a lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000      0x1df lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x22 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x5e lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x18 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x35 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x34 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x58 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x1f lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x43 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x20 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000      0x18e lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000      0x353 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x10 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x35 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000      0x167 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x2d lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x28 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0xaf lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000      0xfe7 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x16 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000    0x1474b lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x12 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x4c lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0x22 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000      0x861 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000000000       0xa5 lib_build/xmc4_gpio.o
+ .comment       0x0000000000000000       0x80 lib_build/xmc4_gpio.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000      0xa4e lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000      0x16d lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x22 lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x8e lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x51 lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0xef lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x6a lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000      0x1df lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x22 lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x5e lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x18 lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x35 lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x34 lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x58 lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x1f lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x43 lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x20 lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000      0x18e lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000      0x353 lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x10 lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x35 lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000      0x167 lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x2d lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x28 lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0xaf lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000      0xfe7 lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x16 lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000    0x1474b lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x12 lib_build/xmc_common.o
+ .debug_macro   0x0000000000000000       0x4c lib_build/xmc_common.o
+ .comment       0x0000000000000000       0x80 lib_build/xmc_common.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000      0xa4e lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000       0x22 lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000       0x18 lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000       0x35 lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000       0x34 lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000      0x16d lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000       0x58 lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000       0x1f lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000       0x43 lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000       0x20 lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000      0x18e lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000      0x353 lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000       0x10 lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000       0x35 lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000       0x2d lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000       0xef lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000       0x6a lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000      0x1df lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000       0xaf lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000      0xfe7 lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000       0x16 lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000000000    0x1474b lib_build/system_XMC4500.o
+ .comment       0x0000000000000000       0x80 lib_build/system_XMC4500.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .group         0x0000000000000000        0xc lib_build/syscalls.o
+ .debug_macro   0x0000000000000000      0xa4e lib_build/syscalls.o
+ .debug_macro   0x0000000000000000       0x22 lib_build/syscalls.o
+ .debug_macro   0x0000000000000000       0x8e lib_build/syscalls.o
+ .debug_macro   0x0000000000000000       0x51 lib_build/syscalls.o
+ .debug_macro   0x0000000000000000       0xef lib_build/syscalls.o
+ .debug_macro   0x0000000000000000       0x6a lib_build/syscalls.o
+ .debug_macro   0x0000000000000000      0x1df lib_build/syscalls.o
+ .debug_macro   0x0000000000000000       0x5e lib_build/syscalls.o
+ .debug_macro   0x0000000000000000       0x18 lib_build/syscalls.o
+ .debug_macro   0x0000000000000000       0x35 lib_build/syscalls.o
+ .debug_macro   0x0000000000000000       0x34 lib_build/syscalls.o
+ .debug_macro   0x0000000000000000      0x16d lib_build/syscalls.o
+ .debug_macro   0x0000000000000000       0x58 lib_build/syscalls.o
+ .debug_macro   0x0000000000000000       0x1f lib_build/syscalls.o
+ .debug_macro   0x0000000000000000       0x43 lib_build/syscalls.o
+ .debug_macro   0x0000000000000000       0x20 lib_build/syscalls.o
+ .debug_macro   0x0000000000000000      0x18e lib_build/syscalls.o
+ .debug_macro   0x0000000000000000      0x353 lib_build/syscalls.o
+ .comment       0x0000000000000000       0x80 lib_build/syscalls.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH_1_cached   0x0000000008000000 0x0000000000100000 xr
+FLASH_1_uncached 0x000000000c000000 0x0000000000100000 xr
+PSRAM_1          0x0000000010000000 0x0000000000010000 !xr
+DSRAM_1_system   0x0000000020000000 0x0000000000010000 !xr
+DSRAM_2_comm     0x0000000030000000 0x0000000000008000 !xr
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD build/PartB.o
+LOAD lib_build/xmc_gpio.o
+LOAD lib_build/xmc4_gpio.o
+LOAD lib_build/xmc_common.o
+LOAD lib_build/startup_XMC4500.o
+LOAD lib_build/system_XMC4500.o
+LOAD lib_build/syscalls.o
+START GROUP
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/libgcc.a
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc.a
+END GROUP
+START GROUP
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/libgcc.a
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc.a
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a
+END GROUP
+                0x0000000000000800                stack_size = DEFINED (stack_size)?stack_size:0x800
+                0x0000000000000040                no_init_size = 0x40
+
+.text           0x0000000008000000     0x1898 load address 0x000000000c000000
+                0x0000000008000000                sText = .
+ *(.reset)
+ .reset         0x0000000008000000      0x2b2 lib_build/startup_XMC4500.o
+                0x0000000008000000                __Vectors
+                0x0000000008000200                Reset_Handler
+                0x00000000080002b0                VADC0_C0_3_IRQHandler
+                0x00000000080002b0                DSD0_7_IRQHandler
+                0x00000000080002b0                DebugMon_Handler
+                0x00000000080002b0                VADC0_C0_0_IRQHandler
+                0x00000000080002b0                CAN0_4_IRQHandler
+                0x00000000080002b0                VADC0_G2_0_IRQHandler
+                0x00000000080002b0                USIC0_5_IRQHandler
+                0x00000000080002b0                POSIF0_0_IRQHandler
+                0x00000000080002b0                POSIF1_0_IRQHandler
+                0x00000000080002b0                HardFault_Handler
+                0x00000000080002b0                VADC0_G1_1_IRQHandler
+                0x00000000080002b0                PendSV_Handler
+                0x00000000080002b0                NMI_Handler
+                0x00000000080002b0                USIC1_3_IRQHandler
+                0x00000000080002b0                CCU40_2_IRQHandler
+                0x00000000080002b0                SCU_0_IRQHandler
+                0x00000000080002b0                ERU0_0_IRQHandler
+                0x00000000080002b0                CCU41_0_IRQHandler
+                0x00000000080002b0                USIC1_5_IRQHandler
+                0x00000000080002b0                DSD0_4_IRQHandler
+                0x00000000080002b0                CCU80_1_IRQHandler
+                0x00000000080002b0                CCU81_0_IRQHandler
+                0x00000000080002b0                UsageFault_Handler
+                0x00000000080002b0                USIC0_0_IRQHandler
+                0x00000000080002b0                POSIF1_1_IRQHandler
+                0x00000000080002b0                ERU0_2_IRQHandler
+                0x00000000080002b0                CCU81_1_IRQHandler
+                0x00000000080002b0                ERU1_1_IRQHandler
+                0x00000000080002b0                VADC0_G2_3_IRQHandler
+                0x00000000080002b0                VADC0_G2_2_IRQHandler
+                0x00000000080002b0                CCU42_3_IRQHandler
+                0x00000000080002b0                ERU0_3_IRQHandler
+                0x00000000080002b0                DSD0_5_IRQHandler
+                0x00000000080002b0                CAN0_6_IRQHandler
+                0x00000000080002b0                CCU43_0_IRQHandler
+                0x00000000080002b0                VADC0_G0_1_IRQHandler
+                0x00000000080002b0                CCU81_2_IRQHandler
+                0x00000000080002b0                USIC2_4_IRQHandler
+                0x00000000080002b0                CCU81_3_IRQHandler
+                0x00000000080002b0                CCU42_1_IRQHandler
+                0x00000000080002b0                USIC1_1_IRQHandler
+                0x00000000080002b0                USIC2_5_IRQHandler
+                0x00000000080002b0                CCU40_0_IRQHandler
+                0x00000000080002b0                CAN0_0_IRQHandler
+                0x00000000080002b0                ERU1_0_IRQHandler
+                0x00000000080002b0                CCU42_2_IRQHandler
+                0x00000000080002b0                Default_Handler
+                0x00000000080002b0                USIC1_4_IRQHandler
+                0x00000000080002b0                ERU1_3_IRQHandler
+                0x00000000080002b0                USIC1_0_IRQHandler
+                0x00000000080002b0                POSIF0_1_IRQHandler
+                0x00000000080002b0                VADC0_G0_0_IRQHandler
+                0x00000000080002b0                DSD0_2_IRQHandler
+                0x00000000080002b0                CCU80_3_IRQHandler
+                0x00000000080002b0                CCU41_3_IRQHandler
+                0x00000000080002b0                CCU80_2_IRQHandler
+                0x00000000080002b0                VADC0_G1_3_IRQHandler
+                0x00000000080002b0                VADC0_G0_3_IRQHandler
+                0x00000000080002b0                GPDMA0_0_IRQHandler
+                0x00000000080002b0                PMU0_0_IRQHandler
+                0x00000000080002b0                CAN0_7_IRQHandler
+                0x00000000080002b0                DSD0_1_IRQHandler
+                0x00000000080002b0                CCU41_2_IRQHandler
+                0x00000000080002b0                VADC0_C0_1_IRQHandler
+                0x00000000080002b0                CCU43_2_IRQHandler
+                0x00000000080002b0                USIC2_2_IRQHandler
+                0x00000000080002b0                MemManage_Handler
+                0x00000000080002b0                VADC0_G3_1_IRQHandler
+                0x00000000080002b0                DAC0_0_IRQHandler
+                0x00000000080002b0                SVC_Handler
+                0x00000000080002b0                VADC0_G3_3_IRQHandler
+                0x00000000080002b0                ERU1_2_IRQHandler
+                0x00000000080002b0                CCU41_1_IRQHandler
+                0x00000000080002b0                DSD0_6_IRQHandler
+                0x00000000080002b0                CCU43_1_IRQHandler
+                0x00000000080002b0                VADC0_G1_2_IRQHandler
+                0x00000000080002b0                USIC2_3_IRQHandler
+                0x00000000080002b0                CAN0_2_IRQHandler
+                0x00000000080002b0                USIC2_0_IRQHandler
+                0x00000000080002b0                VADC0_G0_2_IRQHandler
+                0x00000000080002b0                VADC0_G2_1_IRQHandler
+                0x00000000080002b0                CAN0_3_IRQHandler
+                0x00000000080002b0                ETH0_0_IRQHandler
+                0x00000000080002b0                USIC0_3_IRQHandler
+                0x00000000080002b0                DSD0_0_IRQHandler
+                0x00000000080002b0                VADC0_C0_2_IRQHandler
+                0x00000000080002b0                CCU42_0_IRQHandler
+                0x00000000080002b0                FCE0_0_IRQHandler
+                0x00000000080002b0                VADC0_G1_0_IRQHandler
+                0x00000000080002b0                USB0_0_IRQHandler
+                0x00000000080002b0                CAN0_5_IRQHandler
+                0x00000000080002b0                CCU80_0_IRQHandler
+                0x00000000080002b0                CCU40_1_IRQHandler
+                0x00000000080002b0                USIC2_1_IRQHandler
+                0x00000000080002b0                USIC0_1_IRQHandler
+                0x00000000080002b0                VADC0_G3_2_IRQHandler
+                0x00000000080002b0                CCU40_3_IRQHandler
+                0x00000000080002b0                BusFault_Handler
+                0x00000000080002b0                LEDTS0_0_IRQHandler
+                0x00000000080002b0                USIC0_4_IRQHandler
+                0x00000000080002b0                CCU43_3_IRQHandler
+                0x00000000080002b0                ERU0_1_IRQHandler
+                0x00000000080002b0                VADC0_G3_0_IRQHandler
+                0x00000000080002b0                USIC1_2_IRQHandler
+                0x00000000080002b0                DSD0_3_IRQHandler
+                0x00000000080002b0                SDMMC0_0_IRQHandler
+                0x00000000080002b0                CAN0_1_IRQHandler
+                0x00000000080002b0                USIC0_2_IRQHandler
+                0x00000000080002b0                DAC0_1_IRQHandler
+                0x00000000080002b0                GPDMA1_0_IRQHandler
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text          0x00000000080002b2        0x0 build/PartB.o
+ *fill*         0x00000000080002b2        0x2 
+ .text.__NVIC_SetPriority
+                0x00000000080002b4       0x54 build/PartB.o
+ .text.SysTick_Config
+                0x0000000008000308       0x44 build/PartB.o
+ .text.XMC_GPIO_SetOutputHigh
+                0x000000000800034c       0x22 build/PartB.o
+ .text.XMC_GPIO_SetOutputLow
+                0x000000000800036e       0x24 build/PartB.o
+ .text.XMC_GPIO_GetInput
+                0x0000000008000392       0x26 build/PartB.o
+ .text.countdown
+                0x00000000080003b8       0x24 build/PartB.o
+                0x00000000080003b8                countdown
+ .text.dot      0x00000000080003dc       0x24 build/PartB.o
+                0x00000000080003dc                dot
+ .text.dash     0x0000000008000400       0x24 build/PartB.o
+                0x0000000008000400                dash
+ .text.wait     0x0000000008000424       0x30 build/PartB.o
+                0x0000000008000424                wait
+ .text.SysTick_Handler
+                0x0000000008000454       0x1c build/PartB.o
+                0x0000000008000454                SysTick_Handler
+ .text.sequence
+                0x0000000008000470      0x5b8 build/PartB.o
+                0x0000000008000470                sequence
+ .text.main     0x0000000008000a28      0x200 build/PartB.o
+                0x0000000008000a28                main
+ .text          0x0000000008000c28        0x0 lib_build/xmc_gpio.o
+ .text.XMC_GPIO_SetMode
+                0x0000000008000c28       0x82 lib_build/xmc_gpio.o
+                0x0000000008000c28                XMC_GPIO_SetMode
+ .text.XMC_GPIO_SetHardwareControl
+                0x0000000008000caa       0x46 lib_build/xmc_gpio.o
+                0x0000000008000caa                XMC_GPIO_SetHardwareControl
+ .text          0x0000000008000cf0        0x0 lib_build/xmc4_gpio.o
+ .text.XMC_GPIO_Init
+                0x0000000008000cf0      0x144 lib_build/xmc4_gpio.o
+                0x0000000008000cf0                XMC_GPIO_Init
+ .text.XMC_GPIO_SetOutputStrength
+                0x0000000008000e34       0x86 lib_build/xmc4_gpio.o
+                0x0000000008000e34                XMC_GPIO_SetOutputStrength
+ .text          0x0000000008000eba        0x0 lib_build/xmc_common.o
+ .text.XMC_PRIOARRAY_GetHead
+                0x0000000008000eba       0x2a lib_build/xmc_common.o
+ .text.XMC_PRIOARRAY_GetItemPriority
+                0x0000000008000ee4       0x28 lib_build/xmc_common.o
+ .text.XMC_PRIOARRAY_GetItemNext
+                0x0000000008000f0c       0x28 lib_build/xmc_common.o
+ .text.XMC_LIST_Init
+                0x0000000008000f34       0x1a lib_build/xmc_common.o
+                0x0000000008000f34                XMC_LIST_Init
+ .text.XMC_LIST_GetHead
+                0x0000000008000f4e       0x18 lib_build/xmc_common.o
+                0x0000000008000f4e                XMC_LIST_GetHead
+ .text.XMC_LIST_GetTail
+                0x0000000008000f66       0x3a lib_build/xmc_common.o
+                0x0000000008000f66                XMC_LIST_GetTail
+ .text.XMC_LIST_Add
+                0x0000000008000fa0       0x34 lib_build/xmc_common.o
+                0x0000000008000fa0                XMC_LIST_Add
+ .text.XMC_LIST_Remove
+                0x0000000008000fd4       0x64 lib_build/xmc_common.o
+                0x0000000008000fd4                XMC_LIST_Remove
+ .text.XMC_LIST_Insert
+                0x0000000008001038       0x3c lib_build/xmc_common.o
+                0x0000000008001038                XMC_LIST_Insert
+ .text.XMC_PRIOARRAY_Init
+                0x0000000008001074       0xb2 lib_build/xmc_common.o
+                0x0000000008001074                XMC_PRIOARRAY_Init
+ .text.XMC_PRIOARRAY_Add
+                0x0000000008001126       0xb0 lib_build/xmc_common.o
+                0x0000000008001126                XMC_PRIOARRAY_Add
+ .text.XMC_PRIOARRAY_Remove
+                0x00000000080011d6       0x66 lib_build/xmc_common.o
+                0x00000000080011d6                XMC_PRIOARRAY_Remove
+ .text          0x000000000800123c        0x0 lib_build/startup_XMC4500.o
+ .text          0x000000000800123c        0x0 lib_build/system_XMC4500.o
+ .text.delay    0x000000000800123c       0x2a lib_build/system_XMC4500.o
+ *fill*         0x0000000008001266        0x2 
+ .text.SystemInit
+                0x0000000008001268       0x24 lib_build/system_XMC4500.o
+                0x0000000008001268                SystemInit
+ .text.SystemCoreSetup
+                0x000000000800128c       0x70 lib_build/system_XMC4500.o
+                0x000000000800128c                SystemCoreSetup
+ .text.SystemCoreClockSetup
+                0x00000000080012fc      0x208 lib_build/system_XMC4500.o
+                0x00000000080012fc                SystemCoreClockSetup
+ .text.SystemCoreClockUpdate
+                0x0000000008001504       0xd4 lib_build/system_XMC4500.o
+                0x0000000008001504                SystemCoreClockUpdate
+ .text.OSCHP_GetFrequency
+                0x00000000080015d8       0x14 lib_build/system_XMC4500.o
+                0x00000000080015d8                OSCHP_GetFrequency
+ .text          0x00000000080015ec        0x0 lib_build/syscalls.o
+ .text._sbrk    0x00000000080015ec       0x68 lib_build/syscalls.o
+                0x00000000080015ec                _sbrk
+ .text._init    0x0000000008001654        0xe lib_build/syscalls.o
+                0x0000000008001654                _init
+ .text          0x0000000008001662        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-errno.o)
+ *fill*         0x0000000008001662        0x2 
+ .text.__errno  0x0000000008001664        0xc /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-errno.o)
+                0x0000000008001664                __errno
+ .text          0x0000000008001670        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-impure.o)
+ .text          0x0000000008001670        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-init.o)
+ .text.__libc_init_array
+                0x0000000008001670       0x48 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-init.o)
+                0x0000000008001670                __libc_init_array
+ .text          0x00000000080016b8        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-itoa.o)
+ .text.__itoa   0x00000000080016b8       0x38 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-itoa.o)
+                0x00000000080016b8                __itoa
+ .text.itoa     0x00000000080016f0        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-itoa.o)
+                0x00000000080016f0                itoa
+ *fill*         0x00000000080016f4        0xc 
+ .text          0x0000000008001700       0xdc /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-strlen.o)
+                0x0000000008001700                strlen
+ .text          0x00000000080017dc        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-utoa.o)
+ .text.__utoa   0x00000000080017dc       0x80 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-utoa.o)
+                0x00000000080017dc                __utoa
+ .text.utoa     0x000000000800185c        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-utoa.o)
+                0x000000000800185c                utoa
+ *(.init)
+ *(.fini)
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+ *(.rodata .rodata.*)
+ .rodata        0x0000000008001860        0xc build/PartB.o
+ .rodata._global_impure_ptr
+                0x000000000800186c        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-impure.o)
+                0x000000000800186c                _global_impure_ptr
+ .rodata.__utoa.str1.4
+                0x0000000008001870       0x28 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-utoa.o)
+                                         0x25 (size before relaxing)
+ *(.gnu.linkonce.r*)
+ *(vtable)
+                0x0000000008001898                . = ALIGN (0x4)
+
+.glue_7         0x0000000008001898        0x0 load address 0x000000000c001898
+ .glue_7        0x0000000008001898        0x0 linker stubs
+
+.glue_7t        0x0000000008001898        0x0 load address 0x000000000c001898
+ .glue_7t       0x0000000008001898        0x0 linker stubs
+
+.vfp11_veneer   0x0000000008001898        0x0 load address 0x000000000c001898
+ .vfp11_veneer  0x0000000008001898        0x0 linker stubs
+
+.v4_bx          0x0000000008001898        0x0 load address 0x000000000c001898
+ .v4_bx         0x0000000008001898        0x0 linker stubs
+
+.iplt           0x0000000008001898        0x0 load address 0x000000000c001898
+ .iplt          0x0000000008001898        0x0 build/PartB.o
+
+.rel.dyn        0x0000000008001898        0x0 load address 0x000000000c001898
+ .rel.iplt      0x0000000008001898        0x0 build/PartB.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0000000008001898                . = ALIGN (0x4)
+                0x0000000008001898                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x0000000008001898                __exidx_end = .
+                0x0000000008001898                . = ALIGN (0x4)
+
+Stack           0x0000000010000000      0x800
+                0x0000000010000000                __stack_start = .
+                0x0000000010000800                . = (. + stack_size)
+ *fill*         0x0000000010000000      0x800 
+                0x0000000010000800                __stack_end = .
+                0x0000000010000800                __initial_sp = .
+
+.ram_code       0x0000000010000800        0x0 load address 0x000000000c001898
+                0x0000000010000800                . = ALIGN (0x4)
+                0x0000000010000800                __ram_code_start = .
+ *(.ram_code)
+                0x0000000010000800                . = ALIGN (0x4)
+                0x0000000010000800                __ram_code_end = .
+                0x000000000c001898                __ram_code_load = LOADADDR (.ram_code)
+                0x0000000000000000                __ram_code_size = (__ram_code_end - __ram_code_start)
+
+PSRAM_DATA      0x0000000010000800        0x0 load address 0x000000000c001898
+                0x0000000010000800                . = ALIGN (0x4)
+                0x0000000010000800                __data3_start = .
+ *(PSRAM_DATA)
+                0x0000000010000800                . = ALIGN (0x4)
+                0x0000000010000800                __data3_end = .
+                0x000000000c001898                __data3_load = LOADADDR (PSRAM_DATA)
+                0x0000000000000000                __data3_size = (__data3_end - __data3_start)
+
+PSRAM_BSS       0x0000000010000800        0x0 load address 0x000000000c001898
+                0x0000000010000800                . = ALIGN (0x4)
+                0x0000000010000800                __bss3_start = .
+ *(PSRAM_BSS)
+                0x0000000010000800                . = ALIGN (0x4)
+                0x0000000010000800                __bss3_end = .
+                0x0000000010000800                . = ALIGN (0x8)
+                0x0000000010000800                Heap_Bank3_Start = .
+                0x0000000000000000                __bss3_size = (__bss3_end - __bss3_start)
+
+.data           0x0000000020000000      0x430 load address 0x000000000c001898
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                __data_start = .
+ *(.data)
+ .data          0x0000000020000000        0x4 build/PartB.o
+                0x0000000020000000                dottime_ms
+ .data          0x0000000020000004        0x0 lib_build/xmc_gpio.o
+ .data          0x0000000020000004        0x0 lib_build/xmc4_gpio.o
+ .data          0x0000000020000004        0x0 lib_build/xmc_common.o
+ .data          0x0000000020000004        0x0 lib_build/startup_XMC4500.o
+ .data          0x0000000020000004        0x0 lib_build/system_XMC4500.o
+ .data          0x0000000020000004        0x0 lib_build/syscalls.o
+ .data          0x0000000020000004        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-errno.o)
+ .data          0x0000000020000004        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-impure.o)
+ .data          0x0000000020000004        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-init.o)
+ .data          0x0000000020000004        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-itoa.o)
+ .data          0x0000000020000004        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-strlen.o)
+ .data          0x0000000020000004        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-utoa.o)
+ *(.data*)
+ .data._impure_ptr
+                0x0000000020000004        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-impure.o)
+                0x0000000020000004                _impure_ptr
+ .data.impure_data
+                0x0000000020000008      0x428 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-impure.o)
+ *(*.data)
+ *(.gnu.linkonce.d*)
+                0x0000000020000430                . = ALIGN (0x4)
+                0x0000000020000430                PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                0x0000000020000430                PROVIDE (__preinit_array_end = .)
+                0x0000000020000430                . = ALIGN (0x4)
+                0x0000000020000430                PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array)
+                0x0000000020000430                PROVIDE (__init_array_end = .)
+                0x0000000020000430                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+                0x0000000020000430                . = ALIGN (0x4)
+                0x0000000020000430                __data_end = .
+                0x000000000c001898                __data_load = LOADADDR (.data)
+                0x0000000000000430                __data_size = (__data_end - __data_start)
+
+.igot.plt       0x0000000020000430        0x0 load address 0x000000000c001cc8
+ .igot.plt      0x0000000020000430        0x0 build/PartB.o
+
+.bss            0x0000000020000430       0x28 load address 0x000000000c001cc8
+                0x0000000020000430                . = ALIGN (0x4)
+                0x0000000020000430                __bss_start = .
+ *(.bss)
+ .bss           0x0000000020000430       0x14 build/PartB.o
+                0x0000000020000430                currenttime
+                0x0000000020000434                button1firstpush
+                0x0000000020000438                button1secondpush
+                0x000000002000043c                button1timediff
+                0x0000000020000440                clk
+ .bss           0x0000000020000444        0x0 lib_build/xmc_gpio.o
+ .bss           0x0000000020000444        0x0 lib_build/xmc4_gpio.o
+ .bss           0x0000000020000444        0x0 lib_build/xmc_common.o
+ .bss           0x0000000020000444        0x0 lib_build/startup_XMC4500.o
+ .bss           0x0000000020000444        0x0 lib_build/system_XMC4500.o
+ .bss           0x0000000020000444        0x8 lib_build/syscalls.o
+                0x0000000020000444                __dso_handle
+ .bss           0x000000002000044c        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-errno.o)
+ .bss           0x000000002000044c        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-impure.o)
+ .bss           0x000000002000044c        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-init.o)
+ .bss           0x000000002000044c        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-itoa.o)
+ .bss           0x000000002000044c        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-strlen.o)
+ .bss           0x000000002000044c        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-utoa.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x000000002000044c        0xc build/PartB.o
+                0x000000002000044c                button1time_str
+                0x0000000020000450                button1check
+                0x0000000020000454                button2check
+ *(.gnu.linkonce.b*)
+                0x0000000020000458                . = ALIGN (0x4)
+                0x0000000020000458                __bss_end = .
+                0x0000000020000458                . = ALIGN (0x8)
+                0x0000000020000458                Heap_Bank1_Start = .
+                0x0000000000000028                __bss_size = (__bss_end - __bss_start)
+
+.no_init        0x000000002000ffc0       0x14
+                0x000000002000ffc0                Heap_Bank1_End = .
+ *(.no_init)
+ .no_init       0x000000002000ffc0       0x14 lib_build/system_XMC4500.o
+                0x000000002000ffc0                SystemCoreClock
+                0x000000002000ffc4                g_chipid
+
+DSRAM2_DATA     0x0000000030000000        0x0 load address 0x000000000c001cc8
+                0x0000000030000000                . = ALIGN (0x4)
+                0x0000000030000000                __data2_start = .
+ *(DSRAM2_DATA)
+                0x0000000030000000                . = ALIGN (0x4)
+                0x0000000030000000                __data2_end = .
+                0x000000000c001cc8                __data2_load = LOADADDR (DSRAM2_DATA)
+                0x0000000000000000                __data2_size = (__data2_end - __data2_start)
+                0x0000000000001cc8                __text_size = (((((__exidx_end - sText) + __data_size) + __ram_code_size) + __data2_size) + __data3_size)
+                0x0000000008001cc8                eText = (sText + __text_size)
+
+DSRAM2_BSS      0x0000000030000000        0x0 load address 0x000000000c001cc8
+                0x0000000030000000                . = ALIGN (0x4)
+                0x0000000030000000                __bss2_start = .
+ *(ETH_RAM)
+ *(USB_RAM)
+ *(DSRAM2_BSS)
+                0x0000000030000000                . = ALIGN (0x4)
+                0x0000000030000000                __bss2_end = .
+                0x0000000030000000                . = ALIGN (0x8)
+                0x0000000030000000                Heap_Bank2_Start = .
+                0x0000000000000000                __bss2_size = (__bss2_end - __bss2_start)
+                0x000000000000fb68                Heap_Bank1_Size = (Heap_Bank1_End - Heap_Bank1_Start)
+                0x0000000000008000                Heap_Bank2_Size = (LENGTH (DSRAM_2_comm) - (Heap_Bank2_Start - ORIGIN (DSRAM_2_comm)))
+                0x000000000000f800                Heap_Bank3_Size = (LENGTH (PSRAM_1) - (Heap_Bank3_Start - ORIGIN (PSRAM_1)))
+                0x0000000000000001                ASSERT ((Heap_Bank1_Start <= Heap_Bank1_End), region SRAM_combined overflowed no_init section)
+
+/DISCARD/
+ *(.comment)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x1d0
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x78 build/PartB.o
+ .debug_aranges
+                0x0000000000000078       0x28 lib_build/xmc_gpio.o
+ .debug_aranges
+                0x00000000000000a0       0x28 lib_build/xmc4_gpio.o
+ .debug_aranges
+                0x00000000000000c8       0x78 lib_build/xmc_common.o
+ .debug_aranges
+                0x0000000000000140       0x20 lib_build/startup_XMC4500.o
+ .debug_aranges
+                0x0000000000000160       0x48 lib_build/system_XMC4500.o
+ .debug_aranges
+                0x00000000000001a8       0x28 lib_build/syscalls.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_info     0x0000000000000000     0x596a
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000     0x158f build/PartB.o
+ .debug_info    0x000000000000158f      0xcc6 lib_build/xmc_gpio.o
+ .debug_info    0x0000000000002255      0xd55 lib_build/xmc4_gpio.o
+ .debug_info    0x0000000000002faa      0xd96 lib_build/xmc_common.o
+ .debug_info    0x0000000000003d40       0x26 lib_build/startup_XMC4500.o
+ .debug_info    0x0000000000003d66     0x11ca lib_build/system_XMC4500.o
+ .debug_info    0x0000000000004f30      0xa3a lib_build/syscalls.o
+
+.debug_abbrev   0x0000000000000000      0xe05
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x381 build/PartB.o
+ .debug_abbrev  0x0000000000000381      0x1f8 lib_build/xmc_gpio.o
+ .debug_abbrev  0x0000000000000579      0x1e9 lib_build/xmc4_gpio.o
+ .debug_abbrev  0x0000000000000762      0x22c lib_build/xmc_common.o
+ .debug_abbrev  0x000000000000098e       0x14 lib_build/startup_XMC4500.o
+ .debug_abbrev  0x00000000000009a2      0x287 lib_build/system_XMC4500.o
+ .debug_abbrev  0x0000000000000c29      0x1dc lib_build/syscalls.o
+
+.debug_line     0x0000000000000000     0x18e6
+ *(.debug_line)
+ .debug_line    0x0000000000000000      0x5da build/PartB.o
+ .debug_line    0x00000000000005da      0x38c lib_build/xmc_gpio.o
+ .debug_line    0x0000000000000966      0x39e lib_build/xmc4_gpio.o
+ .debug_line    0x0000000000000d04      0x468 lib_build/xmc_common.o
+ .debug_line    0x000000000000116c       0xd1 lib_build/startup_XMC4500.o
+ .debug_line    0x000000000000123d      0x404 lib_build/system_XMC4500.o
+ .debug_line    0x0000000000001641      0x2a5 lib_build/syscalls.o
+
+.debug_frame    0x0000000000000000      0x68c
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000      0x1c0 build/PartB.o
+ .debug_frame   0x00000000000001c0       0x60 lib_build/xmc_gpio.o
+ .debug_frame   0x0000000000000220       0x60 lib_build/xmc4_gpio.o
+ .debug_frame   0x0000000000000280      0x1f0 lib_build/xmc_common.o
+ .debug_frame   0x0000000000000470       0xec lib_build/system_XMC4500.o
+ .debug_frame   0x000000000000055c       0x5c lib_build/syscalls.o
+ .debug_frame   0x00000000000005b8       0x20 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-errno.o)
+ .debug_frame   0x00000000000005d8       0x2c /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-init.o)
+ .debug_frame   0x0000000000000604       0x3c /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-itoa.o)
+ .debug_frame   0x0000000000000640       0x4c /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-utoa.o)
+
+.debug_str      0x0000000000000000    0x76169
+ *(.debug_str)
+ .debug_str     0x0000000000000000    0x73d27 build/PartB.o
+                                      0x73fec (size before relaxing)
+ .debug_str     0x0000000000073d27       0xe8 lib_build/xmc_gpio.o
+                                      0x7390e (size before relaxing)
+ .debug_str     0x0000000000073e0f      0x264 lib_build/xmc4_gpio.o
+                                      0x73a93 (size before relaxing)
+ .debug_str     0x0000000000074073      0x1b5 lib_build/xmc_common.o
+                                      0x6fa79 (size before relaxing)
+ .debug_str     0x0000000000074228       0x74 lib_build/startup_XMC4500.o
+                                         0x8c (size before relaxing)
+ .debug_str     0x000000000007429c      0xe08 lib_build/system_XMC4500.o
+                                      0x7017f (size before relaxing)
+ .debug_str     0x00000000000750a4     0x10c5 lib_build/syscalls.o
+                                       0x7b56 (size before relaxing)
+
+.debug_loc      0x0000000000000000      0xb4c
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000      0x36c build/PartB.o
+ .debug_loc     0x000000000000036c       0xb8 lib_build/xmc_gpio.o
+ .debug_loc     0x0000000000000424       0xb8 lib_build/xmc4_gpio.o
+ .debug_loc     0x00000000000004dc      0x438 lib_build/xmc_common.o
+ .debug_loc     0x0000000000000914      0x1a4 lib_build/system_XMC4500.o
+ .debug_loc     0x0000000000000ab8       0x94 lib_build/syscalls.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_ranges   0x0000000000000000      0x150
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000       0x68 build/PartB.o
+ .debug_ranges  0x0000000000000068       0x18 lib_build/xmc_gpio.o
+ .debug_ranges  0x0000000000000080       0x18 lib_build/xmc4_gpio.o
+ .debug_ranges  0x0000000000000098       0x68 lib_build/xmc_common.o
+ .debug_ranges  0x0000000000000100       0x38 lib_build/system_XMC4500.o
+ .debug_ranges  0x0000000000000138       0x18 lib_build/syscalls.o
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.build_attributes
+                0x0000000000000000      0x271
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x0000000000000000       0x37 build/PartB.o
+ .ARM.attributes
+                0x0000000000000037       0x37 lib_build/xmc_gpio.o
+ .ARM.attributes
+                0x000000000000006e       0x37 lib_build/xmc4_gpio.o
+ .ARM.attributes
+                0x00000000000000a5       0x37 lib_build/xmc_common.o
+ .ARM.attributes
+                0x00000000000000dc       0x25 lib_build/startup_XMC4500.o
+ .ARM.attributes
+                0x0000000000000101       0x37 lib_build/system_XMC4500.o
+ .ARM.attributes
+                0x0000000000000138       0x37 lib_build/syscalls.o
+ .ARM.attributes
+                0x000000000000016f       0x2e /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-errno.o)
+ .ARM.attributes
+                0x000000000000019d       0x2e /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000000000001cb       0x2e /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000000000001f9       0x2e /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-itoa.o)
+ .ARM.attributes
+                0x0000000000000227       0x1c /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x0000000000000243       0x2e /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg.a(lib_a-utoa.o)
+OUTPUT(build/main.elf elf32-littlearm)
+
+.debug_macro    0x0000000000000000    0x18b70
+ .debug_macro   0x0000000000000000      0x1ba build/PartB.o
+ .debug_macro   0x00000000000001ba      0xa4e build/PartB.o
+ .debug_macro   0x0000000000000c08      0x16d build/PartB.o
+ .debug_macro   0x0000000000000d75       0x22 build/PartB.o
+ .debug_macro   0x0000000000000d97       0x8e build/PartB.o
+ .debug_macro   0x0000000000000e25       0x51 build/PartB.o
+ .debug_macro   0x0000000000000e76       0xef build/PartB.o
+ .debug_macro   0x0000000000000f65       0x6a build/PartB.o
+ .debug_macro   0x0000000000000fcf      0x1df build/PartB.o
+ .debug_macro   0x00000000000011ae       0x22 build/PartB.o
+ .debug_macro   0x00000000000011d0       0x5e build/PartB.o
+ .debug_macro   0x000000000000122e       0x18 build/PartB.o
+ .debug_macro   0x0000000000001246       0x35 build/PartB.o
+ .debug_macro   0x000000000000127b       0x34 build/PartB.o
+ .debug_macro   0x00000000000012af       0x58 build/PartB.o
+ .debug_macro   0x0000000000001307       0x1f build/PartB.o
+ .debug_macro   0x0000000000001326       0x43 build/PartB.o
+ .debug_macro   0x0000000000001369       0x20 build/PartB.o
+ .debug_macro   0x0000000000001389      0x18e build/PartB.o
+ .debug_macro   0x0000000000001517      0x353 build/PartB.o
+ .debug_macro   0x000000000000186a       0x10 build/PartB.o
+ .debug_macro   0x000000000000187a       0x35 build/PartB.o
+ .debug_macro   0x00000000000018af      0x167 build/PartB.o
+ .debug_macro   0x0000000000001a16       0x2d build/PartB.o
+ .debug_macro   0x0000000000001a43       0x28 build/PartB.o
+ .debug_macro   0x0000000000001a6b       0xaf build/PartB.o
+ .debug_macro   0x0000000000001b1a      0xfe7 build/PartB.o
+ .debug_macro   0x0000000000002b01       0x16 build/PartB.o
+ .debug_macro   0x0000000000002b17    0x1474b build/PartB.o
+ .debug_macro   0x0000000000017262       0x12 build/PartB.o
+ .debug_macro   0x0000000000017274       0x4c build/PartB.o
+ .debug_macro   0x00000000000172c0       0x22 build/PartB.o
+ .debug_macro   0x00000000000172e2      0x861 build/PartB.o
+ .debug_macro   0x0000000000017b43       0xa5 build/PartB.o
+ .debug_macro   0x0000000000017be8      0x1b8 lib_build/xmc_gpio.o
+ .debug_macro   0x0000000000017da0      0x1c4 lib_build/xmc4_gpio.o
+ .debug_macro   0x0000000000017f64      0x18a lib_build/xmc_common.o
+ .debug_macro   0x00000000000180ee      0x303 lib_build/system_XMC4500.o
+ .debug_macro   0x00000000000183f1       0x58 lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000018449       0x94 lib_build/system_XMC4500.o
+ .debug_macro   0x00000000000184dd       0x57 lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000018534       0x22 lib_build/system_XMC4500.o
+ .debug_macro   0x0000000000018556      0x191 lib_build/syscalls.o
+ .debug_macro   0x00000000000186e7       0x10 lib_build/syscalls.o
+ .debug_macro   0x00000000000186f7      0x23b lib_build/syscalls.o
+ .debug_macro   0x0000000000018932       0x10 lib_build/syscalls.o
+ .debug_macro   0x0000000000018942       0x1c lib_build/syscalls.o
+ .debug_macro   0x000000000001895e       0x52 lib_build/syscalls.o
+ .debug_macro   0x00000000000189b0       0x40 lib_build/syscalls.o
+ .debug_macro   0x00000000000189f0       0x10 lib_build/syscalls.o
+ .debug_macro   0x0000000000018a00       0x40 lib_build/syscalls.o
+ .debug_macro   0x0000000000018a40       0xd7 lib_build/syscalls.o
+ .debug_macro   0x0000000000018b17       0x1c lib_build/syscalls.o
+ .debug_macro   0x0000000000018b33       0x3d lib_build/syscalls.o

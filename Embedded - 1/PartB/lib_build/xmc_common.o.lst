@@ -1,0 +1,1470 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"xmc_common.c"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text.XMC_PRIOARRAY_GetHead,"ax",%progbits
+  17              		.align	1
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu fpv4-sp-d16
+  23              	XMC_PRIOARRAY_GetHead:
+  24              	.LFB123:
+  25              		.file 1 "/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h"
+   1:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /**
+   2:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * @file xmc_common.h
+   3:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * @date 2017-08-03
+   4:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+   5:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * @cond
+   6:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****   *************************************************************************************************
+   7:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * XMClib v2.1.16 - XMC Peripheral Driver Library 
+   8:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+   9:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * Copyright (c) 2015-2017, Infineon Technologies AG
+  10:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * All rights reserved.                        
+  11:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *                                             
+  12:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
+  13:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * following conditions are met:   
+  14:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *                                                                              
+  15:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * Redistributions of source code must retain the above copyright notice, this list of conditions a
+  16:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * disclaimer.                        
+  17:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * 
+  18:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * Redistributions in binary form must reproduce the above copyright notice, this list of condition
+  19:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * disclaimer in the documentation and/or other materials provided with the distribution.          
+  20:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * 
+  21:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * Neither the name of the copyright holders nor the names of its contributors may be used to endor
+  22:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * products derived from this software without specific prior written permission.                  
+  23:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *                                                                              
+  24:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
+  25:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
+  26:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
+  27:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
+  28:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
+  29:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+  30:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                            
+  31:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *                                                                              
+  32:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
+  33:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * Infineon Technologies AG dave@infineon.com).                                                    
+  34:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  **************************************************************************************************
+  35:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+  36:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * Change History
+  37:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * --------------
+  38:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+  39:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * 2015-06-20:
+  40:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *     - Initial
+  41:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *     - Brief section updated
+  42:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *     - Added XMC_LIB_VERSION macro
+  43:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+  44:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * 2016-02-26:
+  45:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.6
+  46:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *      
+  47:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * 2016-05-30:
+  48:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.8
+  49:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+  50:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * 2016-11-18:
+  51:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.10
+  52:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *     - Changed type of size in XMC_PRIOARRAY_t to fix compilation warnings
+  53:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+  54:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * 2017-04-04:
+  55:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.12
+  56:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+  57:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * 2017-06-24:
+  58:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.14
+  59:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+  60:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * 2017-08-03:
+  61:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.16
+  62:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *     - Added __RAM_FUNC macro
+  63:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+  64:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * @endcond 
+  65:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+  66:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+  67:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+  68:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #ifndef XMC_COMMON_H
+  69:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #define XMC_COMMON_H
+  70:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+  71:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #include <stddef.h>
+  72:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #include <stdint.h>
+  73:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #include <stdbool.h>
+  74:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #include <string.h>
+  75:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+  76:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #include "xmc_device.h"
+  77:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+  78:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /**
+  79:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * @addtogroup XMClib XMC Peripheral Library
+  80:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * @{
+  81:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+  82:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+  83:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /**
+  84:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * @addtogroup COMMON
+  85:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * @brief Common APIs to all peripherals for XMC microcontroller family 
+  86:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * @{
+  87:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+  88:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+  89:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /**************************************************************************************************
+  90:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * MACROS
+  91:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  **************************************************************************************************
+  92:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #define XMC_LIB_MAJOR_VERSION	(2U)
+  93:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #define XMC_LIB_MINOR_VERSION	(1U)
+  94:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #define XMC_LIB_PATCH_VERSION	(16U)
+  95:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  
+  96:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #define XMC_LIB_VERSION         ((XMC_LIB_MAJOR_VERSION << 16U) + (XMC_LIB_MINOR_VERSION << 8U) + X
+  97:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+  98:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /* Define WEAK attribute */
+  99:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #if !defined(__WEAK)
+ 100:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #if defined ( __CC_ARM )
+ 101:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #define __WEAK __attribute__ ((weak))
+ 102:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #elif defined ( __ICCARM__ )
+ 103:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #define __WEAK __weak
+ 104:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #elif defined ( __GNUC__ )
+ 105:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #define __WEAK __attribute__ ((weak))
+ 106:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #elif defined ( __TASKING__ )
+ 107:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #define __WEAK __attribute__ ((weak))
+ 108:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #endif
+ 109:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #endif
+ 110:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 111:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #if !defined(__RAM_FUNC)
+ 112:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #if defined ( __CC_ARM )
+ 113:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** // http://www.keil.com/support/docs/3723.htm
+ 114:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #define __RAM_FUNC __attribute__((section("RAMCODESECTION")))
+ 115:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #elif defined ( __ICCARM__ )
+ 116:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** // https://www.iar.com/support/tech-notes/linker/controlling-placement-of-the-section-where-__ramfu
+ 117:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #define __RAM_FUNC __ramfunc
+ 118:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #elif defined ( __GNUC__ )
+ 119:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #define __RAM_FUNC __attribute__((section(".ram_code"), long_call))
+ 120:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #elif defined ( __TASKING__ )
+ 121:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #define __RAM_FUNC __attribute__((section(".ram_code")))
+ 122:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #endif
+ 123:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #endif
+ 124:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 125:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #ifdef XMC_ASSERT_ENABLE
+ 126:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  #define XMC_ASSERT(msg, exp) { if(!(exp)) {XMC_AssertHandler(msg, __FILE__, __LINE__);} }
+ 127:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #else
+ 128:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  #define XMC_ASSERT(msg, exp) { ; }
+ 129:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #endif
+ 130:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 131:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #ifdef XMC_DEBUG_ENABLE
+ 132:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  #include <stdio.h>
+ 133:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  #define XMC_DEBUG(...) { printf(__VA_ARGS__); }
+ 134:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #else
+ 135:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  #define XMC_DEBUG(...) { ; }
+ 136:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #endif
+ 137:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 138:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #define XMC_UNUSED_ARG(x) (void)x
+ 139:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 140:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #define XMC_STRUCT_INIT(m) memset(&m, 0, sizeof(m))
+ 141:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 142:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #define XMC_PRIOARRAY_DEF(name, size) \
+ 143:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** XMC_PRIOARRAY_ITEM_t prioarray_m_##name[size + 2]; \
+ 144:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** XMC_PRIOARRAY_t prioarray_def_##name = {(size), (prioarray_m_##name)};
+ 145:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 146:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #define XMC_PRIOARRAY(name) \
+ 147:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** &prioarray_def_##name
+ 148:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 149:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /**************************************************************************************************
+ 150:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * DATA STRUCTURES
+ 151:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  **************************************************************************************************
+ 152:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 153:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 154:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 155:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** typedef struct XMC_DRIVER_VERSION 
+ 156:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** {
+ 157:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****   uint8_t major;
+ 158:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****   uint8_t minor;
+ 159:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****   uint8_t patch;
+ 160:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** } XMC_DRIVER_VERSION_t;
+ 161:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 162:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 163:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 164:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 165:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** typedef void *XMC_LIST_t;
+ 166:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 167:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 168:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 169:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 170:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** typedef struct XMC_PRIOARRAY_ITEM
+ 171:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** {
+ 172:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****   int32_t priority;
+ 173:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****   int32_t previous;
+ 174:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****   int32_t next;
+ 175:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** } XMC_PRIOARRAY_ITEM_t;
+ 176:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 177:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 178:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 179:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 180:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** typedef struct XMC_PRIOARRAY
+ 181:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** {
+ 182:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****   int32_t size;
+ 183:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****   XMC_PRIOARRAY_ITEM_t *items;
+ 184:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** } XMC_PRIOARRAY_t;
+ 185:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 186:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /**************************************************************************************************
+ 187:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  * API PROTOTYPES
+ 188:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  **************************************************************************************************
+ 189:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 190:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #ifdef __cplusplus
+ 191:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** extern "C" {
+ 192:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** #endif
+ 193:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 194:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 195:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 196:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 197:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** void XMC_AssertHandler(const char *const msg, const char *const file, uint32_t line);
+ 198:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 199:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 200:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 201:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 202:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** void XMC_LIST_Init(XMC_LIST_t *list);
+ 203:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 204:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 205:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 206:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 207:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** void XMC_LIST_Add(XMC_LIST_t *list, void *const item);
+ 208:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 209:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 210:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 211:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 212:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** void XMC_LIST_Remove(XMC_LIST_t *list, void *const item);
+ 213:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 214:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 215:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 216:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 217:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** uint32_t XMC_LIST_GetLength(XMC_LIST_t *list);
+ 218:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 219:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 220:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 221:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 222:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** void *XMC_LIST_GetHead(XMC_LIST_t *list);
+ 223:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 224:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 225:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 226:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 227:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** void *XMC_LIST_GetTail(XMC_LIST_t *list);
+ 228:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 229:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 230:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 231:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 232:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** void XMC_LIST_Insert(XMC_LIST_t *list, void *prev_item, void *new_item);
+ 233:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 234:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 235:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 236:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 237:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** void XMC_PRIOARRAY_Init(XMC_PRIOARRAY_t *prioarray);
+ 238:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 239:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 240:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 241:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 242:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** void XMC_PRIOARRAY_Add(XMC_PRIOARRAY_t *prioarray, int32_t item, int32_t priority);
+ 243:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 244:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 245:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 246:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 247:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** void XMC_PRIOARRAY_Remove(XMC_PRIOARRAY_t *prioarray, int32_t item);
+ 248:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 249:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 250:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 251:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 252:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetHead(XMC_PRIOARRAY_t *prioarray)
+ 253:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** {
+  26              		.loc 1 253 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 8
+  29              		@ frame_needed = 1, uses_anonymous_args = 0
+  30              		@ link register save eliminated.
+  31 0000 80B4     		push	{r7}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 4
+  34              		.cfi_offset 7, -4
+  35 0002 83B0     		sub	sp, sp, #12
+  36              	.LCFI1:
+  37              		.cfi_def_cfa_offset 16
+  38 0004 00AF     		add	r7, sp, #0
+  39              	.LCFI2:
+  40              		.cfi_def_cfa_register 7
+  41 0006 7860     		str	r0, [r7, #4]
+ 254:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_Init: NULL pointer", prioarray != NULL);
+ 255:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****   return prioarray->items[prioarray->size].next;
+  42              		.loc 1 255 0
+  43 0008 7B68     		ldr	r3, [r7, #4]
+  44 000a 5A68     		ldr	r2, [r3, #4]
+  45 000c 7B68     		ldr	r3, [r7, #4]
+  46 000e 1B68     		ldr	r3, [r3]
+  47 0010 1946     		mov	r1, r3
+  48 0012 0B46     		mov	r3, r1
+  49 0014 5B00     		lsls	r3, r3, #1
+  50 0016 0B44     		add	r3, r3, r1
+  51 0018 9B00     		lsls	r3, r3, #2
+  52 001a 1344     		add	r3, r3, r2
+  53 001c 9B68     		ldr	r3, [r3, #8]
+ 256:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** }
+  54              		.loc 1 256 0
+  55 001e 1846     		mov	r0, r3
+  56 0020 0C37     		adds	r7, r7, #12
+  57              	.LCFI3:
+  58              		.cfi_def_cfa_offset 4
+  59 0022 BD46     		mov	sp, r7
+  60              	.LCFI4:
+  61              		.cfi_def_cfa_register 13
+  62              		@ sp needed
+  63 0024 5DF8047B 		ldr	r7, [sp], #4
+  64              	.LCFI5:
+  65              		.cfi_restore 7
+  66              		.cfi_def_cfa_offset 0
+  67 0028 7047     		bx	lr
+  68              		.cfi_endproc
+  69              	.LFE123:
+  71              		.section	.text.XMC_PRIOARRAY_GetItemPriority,"ax",%progbits
+  72              		.align	1
+  73              		.syntax unified
+  74              		.thumb
+  75              		.thumb_func
+  76              		.fpu fpv4-sp-d16
+  78              	XMC_PRIOARRAY_GetItemPriority:
+  79              	.LFB125:
+ 257:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 258:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 259:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 260:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 261:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetTail(XMC_PRIOARRAY_t *prioarray)
+ 262:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** {
+ 263:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_Init: NULL pointer", prioarray != NULL);
+ 264:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****   return prioarray->items[prioarray->size + 1].previous;
+ 265:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** }
+ 266:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 267:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 268:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 269:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 270:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetItemPriority(XMC_PRIOARRAY_t *prioarray, int32_t item)
+ 271:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** {
+  80              		.loc 1 271 0
+  81              		.cfi_startproc
+  82              		@ args = 0, pretend = 0, frame = 8
+  83              		@ frame_needed = 1, uses_anonymous_args = 0
+  84              		@ link register save eliminated.
+  85 0000 80B4     		push	{r7}
+  86              	.LCFI6:
+  87              		.cfi_def_cfa_offset 4
+  88              		.cfi_offset 7, -4
+  89 0002 83B0     		sub	sp, sp, #12
+  90              	.LCFI7:
+  91              		.cfi_def_cfa_offset 16
+  92 0004 00AF     		add	r7, sp, #0
+  93              	.LCFI8:
+  94              		.cfi_def_cfa_register 7
+  95 0006 7860     		str	r0, [r7, #4]
+  96 0008 3960     		str	r1, [r7]
+ 272:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_GetItemPriority: item out of range", (item >= 0) && (item < prioarray->
+ 273:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****   return prioarray->items[item].priority;
+  97              		.loc 1 273 0
+  98 000a 7B68     		ldr	r3, [r7, #4]
+  99 000c 5968     		ldr	r1, [r3, #4]
+ 100 000e 3A68     		ldr	r2, [r7]
+ 101 0010 1346     		mov	r3, r2
+ 102 0012 5B00     		lsls	r3, r3, #1
+ 103 0014 1344     		add	r3, r3, r2
+ 104 0016 9B00     		lsls	r3, r3, #2
+ 105 0018 0B44     		add	r3, r3, r1
+ 106 001a 1B68     		ldr	r3, [r3]
+ 274:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** }
+ 107              		.loc 1 274 0
+ 108 001c 1846     		mov	r0, r3
+ 109 001e 0C37     		adds	r7, r7, #12
+ 110              	.LCFI9:
+ 111              		.cfi_def_cfa_offset 4
+ 112 0020 BD46     		mov	sp, r7
+ 113              	.LCFI10:
+ 114              		.cfi_def_cfa_register 13
+ 115              		@ sp needed
+ 116 0022 5DF8047B 		ldr	r7, [sp], #4
+ 117              	.LCFI11:
+ 118              		.cfi_restore 7
+ 119              		.cfi_def_cfa_offset 0
+ 120 0026 7047     		bx	lr
+ 121              		.cfi_endproc
+ 122              	.LFE125:
+ 124              		.section	.text.XMC_PRIOARRAY_GetItemNext,"ax",%progbits
+ 125              		.align	1
+ 126              		.syntax unified
+ 127              		.thumb
+ 128              		.thumb_func
+ 129              		.fpu fpv4-sp-d16
+ 131              	XMC_PRIOARRAY_GetItemNext:
+ 132              	.LFB126:
+ 275:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** 
+ 276:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** /*
+ 277:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  *
+ 278:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****  */
+ 279:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetItemNext(XMC_PRIOARRAY_t *prioarray, int32_t item)
+ 280:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** {
+ 133              		.loc 1 280 0
+ 134              		.cfi_startproc
+ 135              		@ args = 0, pretend = 0, frame = 8
+ 136              		@ frame_needed = 1, uses_anonymous_args = 0
+ 137              		@ link register save eliminated.
+ 138 0000 80B4     		push	{r7}
+ 139              	.LCFI12:
+ 140              		.cfi_def_cfa_offset 4
+ 141              		.cfi_offset 7, -4
+ 142 0002 83B0     		sub	sp, sp, #12
+ 143              	.LCFI13:
+ 144              		.cfi_def_cfa_offset 16
+ 145 0004 00AF     		add	r7, sp, #0
+ 146              	.LCFI14:
+ 147              		.cfi_def_cfa_register 7
+ 148 0006 7860     		str	r0, [r7, #4]
+ 149 0008 3960     		str	r1, [r7]
+ 281:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_GetItemNext: item out of range", (item >= 0) && (item < prioarray->size
+ 282:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h ****   return prioarray->items[item].next;
+ 150              		.loc 1 282 0
+ 151 000a 7B68     		ldr	r3, [r7, #4]
+ 152 000c 5968     		ldr	r1, [r3, #4]
+ 153 000e 3A68     		ldr	r2, [r7]
+ 154 0010 1346     		mov	r3, r2
+ 155 0012 5B00     		lsls	r3, r3, #1
+ 156 0014 1344     		add	r3, r3, r2
+ 157 0016 9B00     		lsls	r3, r3, #2
+ 158 0018 0B44     		add	r3, r3, r1
+ 159 001a 9B68     		ldr	r3, [r3, #8]
+ 283:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/inc/xmc_common.h **** }
+ 160              		.loc 1 283 0
+ 161 001c 1846     		mov	r0, r3
+ 162 001e 0C37     		adds	r7, r7, #12
+ 163              	.LCFI15:
+ 164              		.cfi_def_cfa_offset 4
+ 165 0020 BD46     		mov	sp, r7
+ 166              	.LCFI16:
+ 167              		.cfi_def_cfa_register 13
+ 168              		@ sp needed
+ 169 0022 5DF8047B 		ldr	r7, [sp], #4
+ 170              	.LCFI17:
+ 171              		.cfi_restore 7
+ 172              		.cfi_def_cfa_offset 0
+ 173 0026 7047     		bx	lr
+ 174              		.cfi_endproc
+ 175              	.LFE126:
+ 177              		.section	.text.XMC_LIST_Init,"ax",%progbits
+ 178              		.align	1
+ 179              		.global	XMC_LIST_Init
+ 180              		.syntax unified
+ 181              		.thumb
+ 182              		.thumb_func
+ 183              		.fpu fpv4-sp-d16
+ 185              	XMC_LIST_Init:
+ 186              	.LFB128:
+ 187              		.file 2 "/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c"
+   1:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** /**
+   2:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * @file xmc_common.c
+   3:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * @date 2017-02-25
+   4:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  *
+   5:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * @cond
+   6:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  **************************************************************************************************
+   7:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * XMClib v2.1.16 - XMC Peripheral Driver Library 
+   8:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  *
+   9:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * Copyright (c) 2015-2017, Infineon Technologies AG
+  10:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * All rights reserved.                        
+  11:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  *                                             
+  12:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
+  13:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * following conditions are met:   
+  14:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  *                                                                              
+  15:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * Redistributions of source code must retain the above copyright notice, this list of conditions a
+  16:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * disclaimer.                        
+  17:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * 
+  18:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * Redistributions in binary form must reproduce the above copyright notice, this list of condition
+  19:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * disclaimer in the documentation and/or other materials provided with the distribution.          
+  20:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * 
+  21:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * Neither the name of the copyright holders nor the names of its contributors may be used to endor
+  22:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * products derived from this software without specific prior written permission.                  
+  23:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  *                                                                              
+  24:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
+  25:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
+  26:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
+  27:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
+  28:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
+  29:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+  30:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                            
+  31:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  *                                                                              
+  32:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
+  33:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * Infineon Technologies AG dave@infineon.com).                                                    
+  34:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  **************************************************************************************************
+  35:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  *
+  36:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * Change History
+  37:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * --------------
+  38:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  *
+  39:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * 2015-02-20:
+  40:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  *     - Initial <br>
+  41:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  *      
+  42:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * 2017-02-25:
+  43:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  *     - Remove the need to define XMC_USER_ASSERT_FUNCTION
+  44:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  *     - XMC_AssertHandler fixed compilation warnings
+  45:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  *
+  46:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * @endcond 
+  47:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  *
+  48:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  */
+  49:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+  50:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** #include "xmc_common.h"
+  51:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+  52:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** /*******************************************************************************
+  53:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * DATA STRUCTURES
+  54:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  *******************************************************************************/
+  55:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** struct list
+  56:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** {
+  57:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   struct list *next;
+  58:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** };
+  59:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+  60:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** /*******************************************************************************
+  61:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  * API IMPLEMENTATION
+  62:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****  *******************************************************************************/
+  63:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** #if defined(XMC_ASSERT_ENABLE)
+  64:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** __WEAK void XMC_AssertHandler(const char *const msg, const char *const file, uint32_t line)
+  65:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** {
+  66:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   XMC_UNUSED_ARG(msg);
+  67:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   XMC_UNUSED_ARG(file);
+  68:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   XMC_UNUSED_ARG(line);
+  69:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+  70:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   while(1)
+  71:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   {
+  72:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     /* Endless loop */
+  73:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   }
+  74:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** }
+  75:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** #endif
+  76:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+  77:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** void XMC_LIST_Init(XMC_LIST_t *list)
+  78:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** {
+ 188              		.loc 2 78 0
+ 189              		.cfi_startproc
+ 190              		@ args = 0, pretend = 0, frame = 8
+ 191              		@ frame_needed = 1, uses_anonymous_args = 0
+ 192              		@ link register save eliminated.
+ 193 0000 80B4     		push	{r7}
+ 194              	.LCFI18:
+ 195              		.cfi_def_cfa_offset 4
+ 196              		.cfi_offset 7, -4
+ 197 0002 83B0     		sub	sp, sp, #12
+ 198              	.LCFI19:
+ 199              		.cfi_def_cfa_offset 16
+ 200 0004 00AF     		add	r7, sp, #0
+ 201              	.LCFI20:
+ 202              		.cfi_def_cfa_register 7
+ 203 0006 7860     		str	r0, [r7, #4]
+  79:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   *list = NULL;
+ 204              		.loc 2 79 0
+ 205 0008 7B68     		ldr	r3, [r7, #4]
+ 206 000a 0022     		movs	r2, #0
+ 207 000c 1A60     		str	r2, [r3]
+  80:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** }
+ 208              		.loc 2 80 0
+ 209 000e 00BF     		nop
+ 210 0010 0C37     		adds	r7, r7, #12
+ 211              	.LCFI21:
+ 212              		.cfi_def_cfa_offset 4
+ 213 0012 BD46     		mov	sp, r7
+ 214              	.LCFI22:
+ 215              		.cfi_def_cfa_register 13
+ 216              		@ sp needed
+ 217 0014 5DF8047B 		ldr	r7, [sp], #4
+ 218              	.LCFI23:
+ 219              		.cfi_restore 7
+ 220              		.cfi_def_cfa_offset 0
+ 221 0018 7047     		bx	lr
+ 222              		.cfi_endproc
+ 223              	.LFE128:
+ 225              		.section	.text.XMC_LIST_GetHead,"ax",%progbits
+ 226              		.align	1
+ 227              		.global	XMC_LIST_GetHead
+ 228              		.syntax unified
+ 229              		.thumb
+ 230              		.thumb_func
+ 231              		.fpu fpv4-sp-d16
+ 233              	XMC_LIST_GetHead:
+ 234              	.LFB129:
+  81:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+  82:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** void *XMC_LIST_GetHead(XMC_LIST_t *list)
+  83:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** {
+ 235              		.loc 2 83 0
+ 236              		.cfi_startproc
+ 237              		@ args = 0, pretend = 0, frame = 8
+ 238              		@ frame_needed = 1, uses_anonymous_args = 0
+ 239              		@ link register save eliminated.
+ 240 0000 80B4     		push	{r7}
+ 241              	.LCFI24:
+ 242              		.cfi_def_cfa_offset 4
+ 243              		.cfi_offset 7, -4
+ 244 0002 83B0     		sub	sp, sp, #12
+ 245              	.LCFI25:
+ 246              		.cfi_def_cfa_offset 16
+ 247 0004 00AF     		add	r7, sp, #0
+ 248              	.LCFI26:
+ 249              		.cfi_def_cfa_register 7
+ 250 0006 7860     		str	r0, [r7, #4]
+  84:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   return *list;
+ 251              		.loc 2 84 0
+ 252 0008 7B68     		ldr	r3, [r7, #4]
+ 253 000a 1B68     		ldr	r3, [r3]
+  85:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** }
+ 254              		.loc 2 85 0
+ 255 000c 1846     		mov	r0, r3
+ 256 000e 0C37     		adds	r7, r7, #12
+ 257              	.LCFI27:
+ 258              		.cfi_def_cfa_offset 4
+ 259 0010 BD46     		mov	sp, r7
+ 260              	.LCFI28:
+ 261              		.cfi_def_cfa_register 13
+ 262              		@ sp needed
+ 263 0012 5DF8047B 		ldr	r7, [sp], #4
+ 264              	.LCFI29:
+ 265              		.cfi_restore 7
+ 266              		.cfi_def_cfa_offset 0
+ 267 0016 7047     		bx	lr
+ 268              		.cfi_endproc
+ 269              	.LFE129:
+ 271              		.section	.text.XMC_LIST_GetTail,"ax",%progbits
+ 272              		.align	1
+ 273              		.global	XMC_LIST_GetTail
+ 274              		.syntax unified
+ 275              		.thumb
+ 276              		.thumb_func
+ 277              		.fpu fpv4-sp-d16
+ 279              	XMC_LIST_GetTail:
+ 280              	.LFB130:
+  86:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+  87:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** void *XMC_LIST_GetTail(XMC_LIST_t *list)
+  88:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** {
+ 281              		.loc 2 88 0
+ 282              		.cfi_startproc
+ 283              		@ args = 0, pretend = 0, frame = 16
+ 284              		@ frame_needed = 1, uses_anonymous_args = 0
+ 285              		@ link register save eliminated.
+ 286 0000 80B4     		push	{r7}
+ 287              	.LCFI30:
+ 288              		.cfi_def_cfa_offset 4
+ 289              		.cfi_offset 7, -4
+ 290 0002 85B0     		sub	sp, sp, #20
+ 291              	.LCFI31:
+ 292              		.cfi_def_cfa_offset 24
+ 293 0004 00AF     		add	r7, sp, #0
+ 294              	.LCFI32:
+ 295              		.cfi_def_cfa_register 7
+ 296 0006 7860     		str	r0, [r7, #4]
+  89:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   struct list *tail;
+  90:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   
+  91:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   if (*list == NULL) 
+ 297              		.loc 2 91 0
+ 298 0008 7B68     		ldr	r3, [r7, #4]
+ 299 000a 1B68     		ldr	r3, [r3]
+ 300 000c 002B     		cmp	r3, #0
+ 301 000e 02D1     		bne	.L11
+  92:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   {
+  93:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     tail = NULL;
+ 302              		.loc 2 93 0
+ 303 0010 0023     		movs	r3, #0
+ 304 0012 FB60     		str	r3, [r7, #12]
+ 305 0014 0AE0     		b	.L12
+ 306              	.L11:
+  94:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   }
+  95:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   else
+  96:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   {
+  97:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     for (tail = (struct list *)*list; tail->next != NULL; tail = tail->next)
+ 307              		.loc 2 97 0
+ 308 0016 7B68     		ldr	r3, [r7, #4]
+ 309 0018 1B68     		ldr	r3, [r3]
+ 310 001a FB60     		str	r3, [r7, #12]
+ 311 001c 02E0     		b	.L13
+ 312              	.L14:
+ 313              		.loc 2 97 0 is_stmt 0 discriminator 3
+ 314 001e FB68     		ldr	r3, [r7, #12]
+ 315 0020 1B68     		ldr	r3, [r3]
+ 316 0022 FB60     		str	r3, [r7, #12]
+ 317              	.L13:
+ 318              		.loc 2 97 0 discriminator 1
+ 319 0024 FB68     		ldr	r3, [r7, #12]
+ 320 0026 1B68     		ldr	r3, [r3]
+ 321 0028 002B     		cmp	r3, #0
+ 322 002a F8D1     		bne	.L14
+ 323              	.L12:
+  98:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     {
+  99:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****       /* Loop through the list */
+ 100:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     }  
+ 101:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   }
+ 102:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   
+ 103:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   return tail;    
+ 324              		.loc 2 103 0 is_stmt 1
+ 325 002c FB68     		ldr	r3, [r7, #12]
+ 104:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** }
+ 326              		.loc 2 104 0
+ 327 002e 1846     		mov	r0, r3
+ 328 0030 1437     		adds	r7, r7, #20
+ 329              	.LCFI33:
+ 330              		.cfi_def_cfa_offset 4
+ 331 0032 BD46     		mov	sp, r7
+ 332              	.LCFI34:
+ 333              		.cfi_def_cfa_register 13
+ 334              		@ sp needed
+ 335 0034 5DF8047B 		ldr	r7, [sp], #4
+ 336              	.LCFI35:
+ 337              		.cfi_restore 7
+ 338              		.cfi_def_cfa_offset 0
+ 339 0038 7047     		bx	lr
+ 340              		.cfi_endproc
+ 341              	.LFE130:
+ 343              		.section	.text.XMC_LIST_Add,"ax",%progbits
+ 344              		.align	1
+ 345              		.global	XMC_LIST_Add
+ 346              		.syntax unified
+ 347              		.thumb
+ 348              		.thumb_func
+ 349              		.fpu fpv4-sp-d16
+ 351              	XMC_LIST_Add:
+ 352              	.LFB131:
+ 105:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+ 106:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** void XMC_LIST_Add(XMC_LIST_t *list, void *item)
+ 107:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** {
+ 353              		.loc 2 107 0
+ 354              		.cfi_startproc
+ 355              		@ args = 0, pretend = 0, frame = 16
+ 356              		@ frame_needed = 1, uses_anonymous_args = 0
+ 357 0000 80B5     		push	{r7, lr}
+ 358              	.LCFI36:
+ 359              		.cfi_def_cfa_offset 8
+ 360              		.cfi_offset 7, -8
+ 361              		.cfi_offset 14, -4
+ 362 0002 84B0     		sub	sp, sp, #16
+ 363              	.LCFI37:
+ 364              		.cfi_def_cfa_offset 24
+ 365 0004 00AF     		add	r7, sp, #0
+ 366              	.LCFI38:
+ 367              		.cfi_def_cfa_register 7
+ 368 0006 7860     		str	r0, [r7, #4]
+ 369 0008 3960     		str	r1, [r7]
+ 108:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   struct list *tail;
+ 109:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   
+ 110:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   ((struct list *)item)->next = NULL;
+ 370              		.loc 2 110 0
+ 371 000a 3B68     		ldr	r3, [r7]
+ 372 000c 0022     		movs	r2, #0
+ 373 000e 1A60     		str	r2, [r3]
+ 111:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   tail = (struct list *)XMC_LIST_GetTail(list);
+ 374              		.loc 2 111 0
+ 375 0010 7868     		ldr	r0, [r7, #4]
+ 376 0012 FFF7FEFF 		bl	XMC_LIST_GetTail
+ 377 0016 F860     		str	r0, [r7, #12]
+ 112:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   
+ 113:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   if (tail == NULL) 
+ 378              		.loc 2 113 0
+ 379 0018 FB68     		ldr	r3, [r7, #12]
+ 380 001a 002B     		cmp	r3, #0
+ 381 001c 03D1     		bne	.L17
+ 114:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   {
+ 115:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     *list = item;
+ 382              		.loc 2 115 0
+ 383 001e 7B68     		ldr	r3, [r7, #4]
+ 384 0020 3A68     		ldr	r2, [r7]
+ 385 0022 1A60     		str	r2, [r3]
+ 116:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   } 
+ 117:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   else 
+ 118:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   {
+ 119:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     tail->next = (struct list *)item;
+ 120:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   }
+ 121:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** }
+ 386              		.loc 2 121 0
+ 387 0024 02E0     		b	.L19
+ 388              	.L17:
+ 119:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   }
+ 389              		.loc 2 119 0
+ 390 0026 FB68     		ldr	r3, [r7, #12]
+ 391 0028 3A68     		ldr	r2, [r7]
+ 392 002a 1A60     		str	r2, [r3]
+ 393              	.L19:
+ 394              		.loc 2 121 0
+ 395 002c 00BF     		nop
+ 396 002e 1037     		adds	r7, r7, #16
+ 397              	.LCFI39:
+ 398              		.cfi_def_cfa_offset 8
+ 399 0030 BD46     		mov	sp, r7
+ 400              	.LCFI40:
+ 401              		.cfi_def_cfa_register 13
+ 402              		@ sp needed
+ 403 0032 80BD     		pop	{r7, pc}
+ 404              		.cfi_endproc
+ 405              	.LFE131:
+ 407              		.section	.text.XMC_LIST_Remove,"ax",%progbits
+ 408              		.align	1
+ 409              		.global	XMC_LIST_Remove
+ 410              		.syntax unified
+ 411              		.thumb
+ 412              		.thumb_func
+ 413              		.fpu fpv4-sp-d16
+ 415              	XMC_LIST_Remove:
+ 416              	.LFB132:
+ 122:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+ 123:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** void XMC_LIST_Remove(XMC_LIST_t *list, void *item)
+ 124:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** {
+ 417              		.loc 2 124 0
+ 418              		.cfi_startproc
+ 419              		@ args = 0, pretend = 0, frame = 16
+ 420              		@ frame_needed = 1, uses_anonymous_args = 0
+ 421              		@ link register save eliminated.
+ 422 0000 80B4     		push	{r7}
+ 423              	.LCFI41:
+ 424              		.cfi_def_cfa_offset 4
+ 425              		.cfi_offset 7, -4
+ 426 0002 85B0     		sub	sp, sp, #20
+ 427              	.LCFI42:
+ 428              		.cfi_def_cfa_offset 24
+ 429 0004 00AF     		add	r7, sp, #0
+ 430              	.LCFI43:
+ 431              		.cfi_def_cfa_register 7
+ 432 0006 7860     		str	r0, [r7, #4]
+ 433 0008 3960     		str	r1, [r7]
+ 125:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   struct list *right, *left;
+ 126:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   
+ 127:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   if (*list != NULL) 
+ 434              		.loc 2 127 0
+ 435 000a 7B68     		ldr	r3, [r7, #4]
+ 436 000c 1B68     		ldr	r3, [r3]
+ 437 000e 002B     		cmp	r3, #0
+ 438 0010 22D0     		beq	.L27
+ 128:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   {
+ 129:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     left = NULL;
+ 439              		.loc 2 129 0
+ 440 0012 0023     		movs	r3, #0
+ 441 0014 BB60     		str	r3, [r7, #8]
+ 130:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     for(right = (struct list *)*list; right != NULL; right = right->next)
+ 442              		.loc 2 130 0
+ 443 0016 7B68     		ldr	r3, [r7, #4]
+ 444 0018 1B68     		ldr	r3, [r3]
+ 445 001a FB60     		str	r3, [r7, #12]
+ 446 001c 19E0     		b	.L22
+ 447              	.L26:
+ 131:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     {
+ 132:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****       if(right == item) 
+ 448              		.loc 2 132 0
+ 449 001e FA68     		ldr	r2, [r7, #12]
+ 450 0020 3B68     		ldr	r3, [r7]
+ 451 0022 9A42     		cmp	r2, r3
+ 452 0024 10D1     		bne	.L23
+ 133:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****       {
+ 134:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****         if(left == NULL) 
+ 453              		.loc 2 134 0
+ 454 0026 BB68     		ldr	r3, [r7, #8]
+ 455 0028 002B     		cmp	r3, #0
+ 456 002a 04D1     		bne	.L24
+ 135:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****         {
+ 136:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****           /* First on list */
+ 137:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****           *list = right->next;
+ 457              		.loc 2 137 0
+ 458 002c FB68     		ldr	r3, [r7, #12]
+ 459 002e 1A68     		ldr	r2, [r3]
+ 460 0030 7B68     		ldr	r3, [r7, #4]
+ 461 0032 1A60     		str	r2, [r3]
+ 462 0034 03E0     		b	.L25
+ 463              	.L24:
+ 138:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****         } 
+ 139:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****         else 
+ 140:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****         {
+ 141:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****           /* Not first on list */
+ 142:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****           left->next = right->next;
+ 464              		.loc 2 142 0
+ 465 0036 FB68     		ldr	r3, [r7, #12]
+ 466 0038 1A68     		ldr	r2, [r3]
+ 467 003a BB68     		ldr	r3, [r7, #8]
+ 468 003c 1A60     		str	r2, [r3]
+ 469              	.L25:
+ 143:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****         }
+ 144:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****         right->next = NULL;
+ 470              		.loc 2 144 0
+ 471 003e FB68     		ldr	r3, [r7, #12]
+ 472 0040 0022     		movs	r2, #0
+ 473 0042 1A60     		str	r2, [r3]
+ 145:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****         break;
+ 474              		.loc 2 145 0
+ 475 0044 00BF     		nop
+ 146:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****       }
+ 147:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****       left = right;
+ 148:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     }
+ 149:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   }
+ 150:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** }
+ 476              		.loc 2 150 0
+ 477 0046 07E0     		b	.L27
+ 478              	.L23:
+ 147:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     }
+ 479              		.loc 2 147 0 discriminator 2
+ 480 0048 FB68     		ldr	r3, [r7, #12]
+ 481 004a BB60     		str	r3, [r7, #8]
+ 130:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     {
+ 482              		.loc 2 130 0 discriminator 2
+ 483 004c FB68     		ldr	r3, [r7, #12]
+ 484 004e 1B68     		ldr	r3, [r3]
+ 485 0050 FB60     		str	r3, [r7, #12]
+ 486              	.L22:
+ 130:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     {
+ 487              		.loc 2 130 0 is_stmt 0 discriminator 1
+ 488 0052 FB68     		ldr	r3, [r7, #12]
+ 489 0054 002B     		cmp	r3, #0
+ 490 0056 E2D1     		bne	.L26
+ 491              	.L27:
+ 492              		.loc 2 150 0 is_stmt 1
+ 493 0058 00BF     		nop
+ 494 005a 1437     		adds	r7, r7, #20
+ 495              	.LCFI44:
+ 496              		.cfi_def_cfa_offset 4
+ 497 005c BD46     		mov	sp, r7
+ 498              	.LCFI45:
+ 499              		.cfi_def_cfa_register 13
+ 500              		@ sp needed
+ 501 005e 5DF8047B 		ldr	r7, [sp], #4
+ 502              	.LCFI46:
+ 503              		.cfi_restore 7
+ 504              		.cfi_def_cfa_offset 0
+ 505 0062 7047     		bx	lr
+ 506              		.cfi_endproc
+ 507              	.LFE132:
+ 509              		.section	.text.XMC_LIST_Insert,"ax",%progbits
+ 510              		.align	1
+ 511              		.global	XMC_LIST_Insert
+ 512              		.syntax unified
+ 513              		.thumb
+ 514              		.thumb_func
+ 515              		.fpu fpv4-sp-d16
+ 517              	XMC_LIST_Insert:
+ 518              	.LFB133:
+ 151:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+ 152:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** void XMC_LIST_Insert(XMC_LIST_t *list, void *prev_item, void *new_item)
+ 153:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** {
+ 519              		.loc 2 153 0
+ 520              		.cfi_startproc
+ 521              		@ args = 0, pretend = 0, frame = 16
+ 522              		@ frame_needed = 1, uses_anonymous_args = 0
+ 523              		@ link register save eliminated.
+ 524 0000 80B4     		push	{r7}
+ 525              	.LCFI47:
+ 526              		.cfi_def_cfa_offset 4
+ 527              		.cfi_offset 7, -4
+ 528 0002 85B0     		sub	sp, sp, #20
+ 529              	.LCFI48:
+ 530              		.cfi_def_cfa_offset 24
+ 531 0004 00AF     		add	r7, sp, #0
+ 532              	.LCFI49:
+ 533              		.cfi_def_cfa_register 7
+ 534 0006 F860     		str	r0, [r7, #12]
+ 535 0008 B960     		str	r1, [r7, #8]
+ 536 000a 7A60     		str	r2, [r7, #4]
+ 154:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   if (prev_item == NULL) 
+ 537              		.loc 2 154 0
+ 538 000c BB68     		ldr	r3, [r7, #8]
+ 539 000e 002B     		cmp	r3, #0
+ 540 0010 07D1     		bne	.L29
+ 155:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   {
+ 156:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 	((struct list *)new_item)->next = (struct list *)*list;
+ 541              		.loc 2 156 0
+ 542 0012 FB68     		ldr	r3, [r7, #12]
+ 543 0014 1A68     		ldr	r2, [r3]
+ 544 0016 7B68     		ldr	r3, [r7, #4]
+ 545 0018 1A60     		str	r2, [r3]
+ 157:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 	*list = new_item;
+ 546              		.loc 2 157 0
+ 547 001a FB68     		ldr	r3, [r7, #12]
+ 548 001c 7A68     		ldr	r2, [r7, #4]
+ 549 001e 1A60     		str	r2, [r3]
+ 158:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   } 
+ 159:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   else 
+ 160:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   {
+ 161:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     ((struct list *)new_item)->next = ((struct list *)prev_item)->next;
+ 162:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     ((struct list *)prev_item)->next = (struct list *)new_item;
+ 163:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   }
+ 164:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** }
+ 550              		.loc 2 164 0
+ 551 0020 06E0     		b	.L31
+ 552              	.L29:
+ 161:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     ((struct list *)prev_item)->next = (struct list *)new_item;
+ 553              		.loc 2 161 0
+ 554 0022 BB68     		ldr	r3, [r7, #8]
+ 555 0024 1A68     		ldr	r2, [r3]
+ 556 0026 7B68     		ldr	r3, [r7, #4]
+ 557 0028 1A60     		str	r2, [r3]
+ 162:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   }
+ 558              		.loc 2 162 0
+ 559 002a BB68     		ldr	r3, [r7, #8]
+ 560 002c 7A68     		ldr	r2, [r7, #4]
+ 561 002e 1A60     		str	r2, [r3]
+ 562              	.L31:
+ 563              		.loc 2 164 0
+ 564 0030 00BF     		nop
+ 565 0032 1437     		adds	r7, r7, #20
+ 566              	.LCFI50:
+ 567              		.cfi_def_cfa_offset 4
+ 568 0034 BD46     		mov	sp, r7
+ 569              	.LCFI51:
+ 570              		.cfi_def_cfa_register 13
+ 571              		@ sp needed
+ 572 0036 5DF8047B 		ldr	r7, [sp], #4
+ 573              	.LCFI52:
+ 574              		.cfi_restore 7
+ 575              		.cfi_def_cfa_offset 0
+ 576 003a 7047     		bx	lr
+ 577              		.cfi_endproc
+ 578              	.LFE133:
+ 580              		.section	.text.XMC_PRIOARRAY_Init,"ax",%progbits
+ 581              		.align	1
+ 582              		.global	XMC_PRIOARRAY_Init
+ 583              		.syntax unified
+ 584              		.thumb
+ 585              		.thumb_func
+ 586              		.fpu fpv4-sp-d16
+ 588              	XMC_PRIOARRAY_Init:
+ 589              	.LFB134:
+ 165:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+ 166:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** void XMC_PRIOARRAY_Init(XMC_PRIOARRAY_t *prioarray)
+ 167:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** {
+ 590              		.loc 2 167 0
+ 591              		.cfi_startproc
+ 592              		@ args = 0, pretend = 0, frame = 8
+ 593              		@ frame_needed = 1, uses_anonymous_args = 0
+ 594              		@ link register save eliminated.
+ 595 0000 80B4     		push	{r7}
+ 596              	.LCFI53:
+ 597              		.cfi_def_cfa_offset 4
+ 598              		.cfi_offset 7, -4
+ 599 0002 83B0     		sub	sp, sp, #12
+ 600              	.LCFI54:
+ 601              		.cfi_def_cfa_offset 16
+ 602 0004 00AF     		add	r7, sp, #0
+ 603              	.LCFI55:
+ 604              		.cfi_def_cfa_register 7
+ 605 0006 7860     		str	r0, [r7, #4]
+ 168:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   XMC_ASSERT("XMC_PRIOARRAY_Init: NULL pointer", prioarray != NULL);
+ 169:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+ 170:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   /* Initialize head, next points to tail, previous to NULL and the priority is MININT */
+ 171:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   prioarray->items[prioarray->size].next = prioarray->size + 1;
+ 606              		.loc 2 171 0
+ 607 0008 7B68     		ldr	r3, [r7, #4]
+ 608 000a 1A68     		ldr	r2, [r3]
+ 609 000c 7B68     		ldr	r3, [r7, #4]
+ 610 000e 5968     		ldr	r1, [r3, #4]
+ 611 0010 7B68     		ldr	r3, [r7, #4]
+ 612 0012 1B68     		ldr	r3, [r3]
+ 613 0014 1846     		mov	r0, r3
+ 614 0016 0346     		mov	r3, r0
+ 615 0018 5B00     		lsls	r3, r3, #1
+ 616 001a 0344     		add	r3, r3, r0
+ 617 001c 9B00     		lsls	r3, r3, #2
+ 618 001e 0B44     		add	r3, r3, r1
+ 619 0020 0132     		adds	r2, r2, #1
+ 620 0022 9A60     		str	r2, [r3, #8]
+ 172:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   prioarray->items[prioarray->size].previous = -1;
+ 621              		.loc 2 172 0
+ 622 0024 7B68     		ldr	r3, [r7, #4]
+ 623 0026 5A68     		ldr	r2, [r3, #4]
+ 624 0028 7B68     		ldr	r3, [r7, #4]
+ 625 002a 1B68     		ldr	r3, [r3]
+ 626 002c 1946     		mov	r1, r3
+ 627 002e 0B46     		mov	r3, r1
+ 628 0030 5B00     		lsls	r3, r3, #1
+ 629 0032 0B44     		add	r3, r3, r1
+ 630 0034 9B00     		lsls	r3, r3, #2
+ 631 0036 1344     		add	r3, r3, r2
+ 632 0038 4FF0FF32 		mov	r2, #-1
+ 633 003c 5A60     		str	r2, [r3, #4]
+ 173:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   prioarray->items[prioarray->size].priority = INT32_MAX;
+ 634              		.loc 2 173 0
+ 635 003e 7B68     		ldr	r3, [r7, #4]
+ 636 0040 5A68     		ldr	r2, [r3, #4]
+ 637 0042 7B68     		ldr	r3, [r7, #4]
+ 638 0044 1B68     		ldr	r3, [r3]
+ 639 0046 1946     		mov	r1, r3
+ 640 0048 0B46     		mov	r3, r1
+ 641 004a 5B00     		lsls	r3, r3, #1
+ 642 004c 0B44     		add	r3, r3, r1
+ 643 004e 9B00     		lsls	r3, r3, #2
+ 644 0050 1344     		add	r3, r3, r2
+ 645 0052 6FF00042 		mvn	r2, #-2147483648
+ 646 0056 1A60     		str	r2, [r3]
+ 174:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+ 175:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   /* Initialize tail, next points to NULL, previous is the head and the priority is MAXINT */
+ 176:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   prioarray->items[prioarray->size + 1].next = -1;
+ 647              		.loc 2 176 0
+ 648 0058 7B68     		ldr	r3, [r7, #4]
+ 649 005a 5968     		ldr	r1, [r3, #4]
+ 650 005c 7B68     		ldr	r3, [r7, #4]
+ 651 005e 1B68     		ldr	r3, [r3]
+ 652 0060 5A1C     		adds	r2, r3, #1
+ 653 0062 1346     		mov	r3, r2
+ 654 0064 5B00     		lsls	r3, r3, #1
+ 655 0066 1344     		add	r3, r3, r2
+ 656 0068 9B00     		lsls	r3, r3, #2
+ 657 006a 0B44     		add	r3, r3, r1
+ 658 006c 4FF0FF32 		mov	r2, #-1
+ 659 0070 9A60     		str	r2, [r3, #8]
+ 177:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   prioarray->items[prioarray->size + 1].previous = prioarray->size;
+ 660              		.loc 2 177 0
+ 661 0072 7B68     		ldr	r3, [r7, #4]
+ 662 0074 5968     		ldr	r1, [r3, #4]
+ 663 0076 7B68     		ldr	r3, [r7, #4]
+ 664 0078 1B68     		ldr	r3, [r3]
+ 665 007a 5A1C     		adds	r2, r3, #1
+ 666 007c 1346     		mov	r3, r2
+ 667 007e 5B00     		lsls	r3, r3, #1
+ 668 0080 1344     		add	r3, r3, r2
+ 669 0082 9B00     		lsls	r3, r3, #2
+ 670 0084 0B44     		add	r3, r3, r1
+ 671 0086 7A68     		ldr	r2, [r7, #4]
+ 672 0088 1268     		ldr	r2, [r2]
+ 673 008a 5A60     		str	r2, [r3, #4]
+ 178:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   prioarray->items[prioarray->size + 1].priority = INT32_MIN;
+ 674              		.loc 2 178 0
+ 675 008c 7B68     		ldr	r3, [r7, #4]
+ 676 008e 5968     		ldr	r1, [r3, #4]
+ 677 0090 7B68     		ldr	r3, [r7, #4]
+ 678 0092 1B68     		ldr	r3, [r3]
+ 679 0094 5A1C     		adds	r2, r3, #1
+ 680 0096 1346     		mov	r3, r2
+ 681 0098 5B00     		lsls	r3, r3, #1
+ 682 009a 1344     		add	r3, r3, r2
+ 683 009c 9B00     		lsls	r3, r3, #2
+ 684 009e 0B44     		add	r3, r3, r1
+ 685 00a0 4FF00042 		mov	r2, #-2147483648
+ 686 00a4 1A60     		str	r2, [r3]
+ 179:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+ 180:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** }
+ 687              		.loc 2 180 0
+ 688 00a6 00BF     		nop
+ 689 00a8 0C37     		adds	r7, r7, #12
+ 690              	.LCFI56:
+ 691              		.cfi_def_cfa_offset 4
+ 692 00aa BD46     		mov	sp, r7
+ 693              	.LCFI57:
+ 694              		.cfi_def_cfa_register 13
+ 695              		@ sp needed
+ 696 00ac 5DF8047B 		ldr	r7, [sp], #4
+ 697              	.LCFI58:
+ 698              		.cfi_restore 7
+ 699              		.cfi_def_cfa_offset 0
+ 700 00b0 7047     		bx	lr
+ 701              		.cfi_endproc
+ 702              	.LFE134:
+ 704              		.section	.text.XMC_PRIOARRAY_Add,"ax",%progbits
+ 705              		.align	1
+ 706              		.global	XMC_PRIOARRAY_Add
+ 707              		.syntax unified
+ 708              		.thumb
+ 709              		.thumb_func
+ 710              		.fpu fpv4-sp-d16
+ 712              	XMC_PRIOARRAY_Add:
+ 713              	.LFB135:
+ 181:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+ 182:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** void XMC_PRIOARRAY_Add(XMC_PRIOARRAY_t *prioarray, int32_t item, int32_t priority)
+ 183:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** {
+ 714              		.loc 2 183 0
+ 715              		.cfi_startproc
+ 716              		@ args = 0, pretend = 0, frame = 24
+ 717              		@ frame_needed = 1, uses_anonymous_args = 0
+ 718 0000 80B5     		push	{r7, lr}
+ 719              	.LCFI59:
+ 720              		.cfi_def_cfa_offset 8
+ 721              		.cfi_offset 7, -8
+ 722              		.cfi_offset 14, -4
+ 723 0002 86B0     		sub	sp, sp, #24
+ 724              	.LCFI60:
+ 725              		.cfi_def_cfa_offset 32
+ 726 0004 00AF     		add	r7, sp, #0
+ 727              	.LCFI61:
+ 728              		.cfi_def_cfa_register 7
+ 729 0006 F860     		str	r0, [r7, #12]
+ 730 0008 B960     		str	r1, [r7, #8]
+ 731 000a 7A60     		str	r2, [r7, #4]
+ 184:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   int32_t next;
+ 185:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   int32_t previous;
+ 186:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+ 187:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   XMC_ASSERT("XMC_PRIOARRAY_Add: item out of range", (item >= 0) && (item < prioarray->size));
+ 188:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   
+ 189:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   next = XMC_PRIOARRAY_GetHead(prioarray);
+ 732              		.loc 2 189 0
+ 733 000c F868     		ldr	r0, [r7, #12]
+ 734 000e FFF7FEFF 		bl	XMC_PRIOARRAY_GetHead
+ 735 0012 7861     		str	r0, [r7, #20]
+ 190:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   while (XMC_PRIOARRAY_GetItemPriority(prioarray, next) > priority)
+ 736              		.loc 2 190 0
+ 737 0014 04E0     		b	.L34
+ 738              	.L35:
+ 191:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   {
+ 192:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****     next = XMC_PRIOARRAY_GetItemNext(prioarray, next);
+ 739              		.loc 2 192 0
+ 740 0016 7969     		ldr	r1, [r7, #20]
+ 741 0018 F868     		ldr	r0, [r7, #12]
+ 742 001a FFF7FEFF 		bl	XMC_PRIOARRAY_GetItemNext
+ 743 001e 7861     		str	r0, [r7, #20]
+ 744              	.L34:
+ 190:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   while (XMC_PRIOARRAY_GetItemPriority(prioarray, next) > priority)
+ 745              		.loc 2 190 0
+ 746 0020 7969     		ldr	r1, [r7, #20]
+ 747 0022 F868     		ldr	r0, [r7, #12]
+ 748 0024 FFF7FEFF 		bl	XMC_PRIOARRAY_GetItemPriority
+ 749 0028 0246     		mov	r2, r0
+ 750 002a 7B68     		ldr	r3, [r7, #4]
+ 751 002c 9342     		cmp	r3, r2
+ 752 002e F2DB     		blt	.L35
+ 193:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   }
+ 194:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+ 195:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   previous = prioarray->items[next].previous;
+ 753              		.loc 2 195 0
+ 754 0030 FB68     		ldr	r3, [r7, #12]
+ 755 0032 5968     		ldr	r1, [r3, #4]
+ 756 0034 7A69     		ldr	r2, [r7, #20]
+ 757 0036 1346     		mov	r3, r2
+ 758 0038 5B00     		lsls	r3, r3, #1
+ 759 003a 1344     		add	r3, r3, r2
+ 760 003c 9B00     		lsls	r3, r3, #2
+ 761 003e 0B44     		add	r3, r3, r1
+ 762 0040 5B68     		ldr	r3, [r3, #4]
+ 763 0042 3B61     		str	r3, [r7, #16]
+ 196:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+ 197:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   prioarray->items[item].next = next;
+ 764              		.loc 2 197 0
+ 765 0044 FB68     		ldr	r3, [r7, #12]
+ 766 0046 5968     		ldr	r1, [r3, #4]
+ 767 0048 BA68     		ldr	r2, [r7, #8]
+ 768 004a 1346     		mov	r3, r2
+ 769 004c 5B00     		lsls	r3, r3, #1
+ 770 004e 1344     		add	r3, r3, r2
+ 771 0050 9B00     		lsls	r3, r3, #2
+ 772 0052 0B44     		add	r3, r3, r1
+ 773 0054 7A69     		ldr	r2, [r7, #20]
+ 774 0056 9A60     		str	r2, [r3, #8]
+ 198:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   prioarray->items[item].previous = previous;
+ 775              		.loc 2 198 0
+ 776 0058 FB68     		ldr	r3, [r7, #12]
+ 777 005a 5968     		ldr	r1, [r3, #4]
+ 778 005c BA68     		ldr	r2, [r7, #8]
+ 779 005e 1346     		mov	r3, r2
+ 780 0060 5B00     		lsls	r3, r3, #1
+ 781 0062 1344     		add	r3, r3, r2
+ 782 0064 9B00     		lsls	r3, r3, #2
+ 783 0066 0B44     		add	r3, r3, r1
+ 784 0068 3A69     		ldr	r2, [r7, #16]
+ 785 006a 5A60     		str	r2, [r3, #4]
+ 199:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   prioarray->items[item].priority = priority;
+ 786              		.loc 2 199 0
+ 787 006c FB68     		ldr	r3, [r7, #12]
+ 788 006e 5968     		ldr	r1, [r3, #4]
+ 789 0070 BA68     		ldr	r2, [r7, #8]
+ 790 0072 1346     		mov	r3, r2
+ 791 0074 5B00     		lsls	r3, r3, #1
+ 792 0076 1344     		add	r3, r3, r2
+ 793 0078 9B00     		lsls	r3, r3, #2
+ 794 007a 0B44     		add	r3, r3, r1
+ 795 007c 7A68     		ldr	r2, [r7, #4]
+ 796 007e 1A60     		str	r2, [r3]
+ 200:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+ 201:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   prioarray->items[previous].next = item;
+ 797              		.loc 2 201 0
+ 798 0080 FB68     		ldr	r3, [r7, #12]
+ 799 0082 5968     		ldr	r1, [r3, #4]
+ 800 0084 3A69     		ldr	r2, [r7, #16]
+ 801 0086 1346     		mov	r3, r2
+ 802 0088 5B00     		lsls	r3, r3, #1
+ 803 008a 1344     		add	r3, r3, r2
+ 804 008c 9B00     		lsls	r3, r3, #2
+ 805 008e 0B44     		add	r3, r3, r1
+ 806 0090 BA68     		ldr	r2, [r7, #8]
+ 807 0092 9A60     		str	r2, [r3, #8]
+ 202:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   prioarray->items[next].previous = item;
+ 808              		.loc 2 202 0
+ 809 0094 FB68     		ldr	r3, [r7, #12]
+ 810 0096 5968     		ldr	r1, [r3, #4]
+ 811 0098 7A69     		ldr	r2, [r7, #20]
+ 812 009a 1346     		mov	r3, r2
+ 813 009c 5B00     		lsls	r3, r3, #1
+ 814 009e 1344     		add	r3, r3, r2
+ 815 00a0 9B00     		lsls	r3, r3, #2
+ 816 00a2 0B44     		add	r3, r3, r1
+ 817 00a4 BA68     		ldr	r2, [r7, #8]
+ 818 00a6 5A60     		str	r2, [r3, #4]
+ 203:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** }
+ 819              		.loc 2 203 0
+ 820 00a8 00BF     		nop
+ 821 00aa 1837     		adds	r7, r7, #24
+ 822              	.LCFI62:
+ 823              		.cfi_def_cfa_offset 8
+ 824 00ac BD46     		mov	sp, r7
+ 825              	.LCFI63:
+ 826              		.cfi_def_cfa_register 13
+ 827              		@ sp needed
+ 828 00ae 80BD     		pop	{r7, pc}
+ 829              		.cfi_endproc
+ 830              	.LFE135:
+ 832              		.section	.text.XMC_PRIOARRAY_Remove,"ax",%progbits
+ 833              		.align	1
+ 834              		.global	XMC_PRIOARRAY_Remove
+ 835              		.syntax unified
+ 836              		.thumb
+ 837              		.thumb_func
+ 838              		.fpu fpv4-sp-d16
+ 840              	XMC_PRIOARRAY_Remove:
+ 841              	.LFB136:
+ 204:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+ 205:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** void XMC_PRIOARRAY_Remove(XMC_PRIOARRAY_t *prioarray, int32_t item)
+ 206:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** {
+ 842              		.loc 2 206 0
+ 843              		.cfi_startproc
+ 844              		@ args = 0, pretend = 0, frame = 16
+ 845              		@ frame_needed = 1, uses_anonymous_args = 0
+ 846              		@ link register save eliminated.
+ 847 0000 80B4     		push	{r7}
+ 848              	.LCFI64:
+ 849              		.cfi_def_cfa_offset 4
+ 850              		.cfi_offset 7, -4
+ 851 0002 85B0     		sub	sp, sp, #20
+ 852              	.LCFI65:
+ 853              		.cfi_def_cfa_offset 24
+ 854 0004 00AF     		add	r7, sp, #0
+ 855              	.LCFI66:
+ 856              		.cfi_def_cfa_register 7
+ 857 0006 7860     		str	r0, [r7, #4]
+ 858 0008 3960     		str	r1, [r7]
+ 207:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   int32_t next;
+ 208:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   int32_t previous;
+ 209:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+ 210:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   XMC_ASSERT("XMC_PRIOARRAY_Add: item out of range", (item >= 0) && (item < prioarray->size));
+ 211:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   
+ 212:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   next = prioarray->items[item].next;
+ 859              		.loc 2 212 0
+ 860 000a 7B68     		ldr	r3, [r7, #4]
+ 861 000c 5968     		ldr	r1, [r3, #4]
+ 862 000e 3A68     		ldr	r2, [r7]
+ 863 0010 1346     		mov	r3, r2
+ 864 0012 5B00     		lsls	r3, r3, #1
+ 865 0014 1344     		add	r3, r3, r2
+ 866 0016 9B00     		lsls	r3, r3, #2
+ 867 0018 0B44     		add	r3, r3, r1
+ 868 001a 9B68     		ldr	r3, [r3, #8]
+ 869 001c FB60     		str	r3, [r7, #12]
+ 213:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   previous = prioarray->items[item].previous;
+ 870              		.loc 2 213 0
+ 871 001e 7B68     		ldr	r3, [r7, #4]
+ 872 0020 5968     		ldr	r1, [r3, #4]
+ 873 0022 3A68     		ldr	r2, [r7]
+ 874 0024 1346     		mov	r3, r2
+ 875 0026 5B00     		lsls	r3, r3, #1
+ 876 0028 1344     		add	r3, r3, r2
+ 877 002a 9B00     		lsls	r3, r3, #2
+ 878 002c 0B44     		add	r3, r3, r1
+ 879 002e 5B68     		ldr	r3, [r3, #4]
+ 880 0030 BB60     		str	r3, [r7, #8]
+ 214:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** 
+ 215:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   prioarray->items[previous].next = next;
+ 881              		.loc 2 215 0
+ 882 0032 7B68     		ldr	r3, [r7, #4]
+ 883 0034 5968     		ldr	r1, [r3, #4]
+ 884 0036 BA68     		ldr	r2, [r7, #8]
+ 885 0038 1346     		mov	r3, r2
+ 886 003a 5B00     		lsls	r3, r3, #1
+ 887 003c 1344     		add	r3, r3, r2
+ 888 003e 9B00     		lsls	r3, r3, #2
+ 889 0040 0B44     		add	r3, r3, r1
+ 890 0042 FA68     		ldr	r2, [r7, #12]
+ 891 0044 9A60     		str	r2, [r3, #8]
+ 216:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c ****   prioarray->items[next].previous = previous;
+ 892              		.loc 2 216 0
+ 893 0046 7B68     		ldr	r3, [r7, #4]
+ 894 0048 5968     		ldr	r1, [r3, #4]
+ 895 004a FA68     		ldr	r2, [r7, #12]
+ 896 004c 1346     		mov	r3, r2
+ 897 004e 5B00     		lsls	r3, r3, #1
+ 898 0050 1344     		add	r3, r3, r2
+ 899 0052 9B00     		lsls	r3, r3, #2
+ 900 0054 0B44     		add	r3, r3, r1
+ 901 0056 BA68     		ldr	r2, [r7, #8]
+ 902 0058 5A60     		str	r2, [r3, #4]
+ 217:/opt/XMClib/XMC_Peripheral_Library_v2.1.16/XMCLib/src/xmc_common.c **** }
+ 903              		.loc 2 217 0
+ 904 005a 00BF     		nop
+ 905 005c 1437     		adds	r7, r7, #20
+ 906              	.LCFI67:
+ 907              		.cfi_def_cfa_offset 4
+ 908 005e BD46     		mov	sp, r7
+ 909              	.LCFI68:
+ 910              		.cfi_def_cfa_register 13
+ 911              		@ sp needed
+ 912 0060 5DF8047B 		ldr	r7, [sp], #4
+ 913              	.LCFI69:
+ 914              		.cfi_restore 7
+ 915              		.cfi_def_cfa_offset 0
+ 916 0064 7047     		bx	lr
+ 917              		.cfi_endproc
+ 918              	.LFE136:
+ 920              		.text
+ 921              	.Letext0:
+ 922              		.file 3 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 923              		.file 4 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 924              		.file 5 "/usr/arm-none-eabi/include/sys/lock.h"
+ 925              		.file 6 "/usr/arm-none-eabi/include/sys/_types.h"
+ 926              		.file 7 "/usr/lib/gcc/arm-none-eabi/7.3.1/include/stddef.h"
+ 927              		.file 8 "/usr/arm-none-eabi/include/sys/reent.h"
+ 928              		.file 9 "/opt/XMClib/XMC_Peripheral_Library_v2.1.16/CMSIS/Include/core_cm4.h"
+ 929              		.file 10 "/opt/XMClib/XMC_Peripheral_Library_v2.1.16/CMSIS/Infineon/XMC4500_series/Include/system_
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 xmc_common.c
+     /tmp/cckdYrIz.s:17     .text.XMC_PRIOARRAY_GetHead:0000000000000000 $t
+     /tmp/cckdYrIz.s:23     .text.XMC_PRIOARRAY_GetHead:0000000000000000 XMC_PRIOARRAY_GetHead
+     /tmp/cckdYrIz.s:72     .text.XMC_PRIOARRAY_GetItemPriority:0000000000000000 $t
+     /tmp/cckdYrIz.s:78     .text.XMC_PRIOARRAY_GetItemPriority:0000000000000000 XMC_PRIOARRAY_GetItemPriority
+     /tmp/cckdYrIz.s:125    .text.XMC_PRIOARRAY_GetItemNext:0000000000000000 $t
+     /tmp/cckdYrIz.s:131    .text.XMC_PRIOARRAY_GetItemNext:0000000000000000 XMC_PRIOARRAY_GetItemNext
+     /tmp/cckdYrIz.s:178    .text.XMC_LIST_Init:0000000000000000 $t
+     /tmp/cckdYrIz.s:185    .text.XMC_LIST_Init:0000000000000000 XMC_LIST_Init
+     /tmp/cckdYrIz.s:226    .text.XMC_LIST_GetHead:0000000000000000 $t
+     /tmp/cckdYrIz.s:233    .text.XMC_LIST_GetHead:0000000000000000 XMC_LIST_GetHead
+     /tmp/cckdYrIz.s:272    .text.XMC_LIST_GetTail:0000000000000000 $t
+     /tmp/cckdYrIz.s:279    .text.XMC_LIST_GetTail:0000000000000000 XMC_LIST_GetTail
+     /tmp/cckdYrIz.s:344    .text.XMC_LIST_Add:0000000000000000 $t
+     /tmp/cckdYrIz.s:351    .text.XMC_LIST_Add:0000000000000000 XMC_LIST_Add
+     /tmp/cckdYrIz.s:408    .text.XMC_LIST_Remove:0000000000000000 $t
+     /tmp/cckdYrIz.s:415    .text.XMC_LIST_Remove:0000000000000000 XMC_LIST_Remove
+     /tmp/cckdYrIz.s:510    .text.XMC_LIST_Insert:0000000000000000 $t
+     /tmp/cckdYrIz.s:517    .text.XMC_LIST_Insert:0000000000000000 XMC_LIST_Insert
+     /tmp/cckdYrIz.s:581    .text.XMC_PRIOARRAY_Init:0000000000000000 $t
+     /tmp/cckdYrIz.s:588    .text.XMC_PRIOARRAY_Init:0000000000000000 XMC_PRIOARRAY_Init
+     /tmp/cckdYrIz.s:705    .text.XMC_PRIOARRAY_Add:0000000000000000 $t
+     /tmp/cckdYrIz.s:712    .text.XMC_PRIOARRAY_Add:0000000000000000 XMC_PRIOARRAY_Add
+     /tmp/cckdYrIz.s:833    .text.XMC_PRIOARRAY_Remove:0000000000000000 $t
+     /tmp/cckdYrIz.s:840    .text.XMC_PRIOARRAY_Remove:0000000000000000 XMC_PRIOARRAY_Remove
+                           .group:0000000000000000 wm4.0.7a9f4dea188ccacb7d502cdcabb040c1
+                           .group:0000000000000000 wm4.stddef.h.39.99b5021e28f91cdb161c889e07266673
+                           .group:0000000000000000 wm4._newlib_version.h.4.875b979a44719054cd750d0952ad3fd6
+                           .group:0000000000000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:0000000000000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:0000000000000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:0000000000000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:0000000000000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:0000000000000000 wm4.stdbool.h.29.07dce69c3b78884144b7f7bd19483461
+                           .group:0000000000000000 wm4.newlib.h.8.f6e543eac3f2f65163ba2ffe3b04987b
+                           .group:0000000000000000 wm4.ieeefp.h.77.220d9cccac42cd58761758bee2df4ce6
+                           .group:0000000000000000 wm4.config.h.220.6cac6a9685cfce5e83c17784171638d9
+                           .group:0000000000000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:0000000000000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:0000000000000000 wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
+                           .group:0000000000000000 wm4.stddef.h.161.5349cb105733e8777bfb0cf53c4e3f34
+                           .group:0000000000000000 wm4._types.h.184.03611d4f6b5bec9997bcf4279eceba07
+                           .group:0000000000000000 wm4.reent.h.17.90c2574d4acdcfce933db5cb09ff35fe
+                           .group:0000000000000000 wm4.cdefs.h.47.14fad0b327eb9dcf106599b738d85132
+                           .group:0000000000000000 wm4.string.h.15.dab3980bf35408a4c507182805e2de3a
+                           .group:0000000000000000 wm4.stddef.h.161.19e15733342b50ead2919490b095303e
+                           .group:0000000000000000 wm4.xmc_device.h.61.ba2d082e12f51240746cffdd60d42b81
+                           .group:0000000000000000 wm4.XMC4500.h.55.9aa45b9b5790506b2dcb963e4e7adeaf
+                           .group:0000000000000000 wm4.core_cm4.h.32.6c6eb1c8daeca23ce7ba79c8e8120d52
+                           .group:0000000000000000 wm4.cmsis_gcc.h.26.91b63349961c35637933e4fba51b867b
+                           .group:0000000000000000 wm4.core_cm4.h.172.fdd5a388a160bb6ff767b7d7ee212268
+                           .group:0000000000000000 wm4.system_XMC4500.h.42.99124977c10ca8844a71949adbeabd70
+                           .group:0000000000000000 wm4.XMC4500.h.208.b340195df97f067735c4c769ba59985a
+                           .group:0000000000000000 wm4.xmc_device.h.1460.8860499b404961ffcfbb8d1fefcb2146
+                           .group:0000000000000000 wm4.xmc_common.h.92.3f4336a80569affab05a81145b87c2fc
+
+NO UNDEFINED SYMBOLS
